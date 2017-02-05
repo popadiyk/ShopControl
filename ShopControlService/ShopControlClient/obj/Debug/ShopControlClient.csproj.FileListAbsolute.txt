@@ -1,0 +1,1 @@
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\bin\Debug\ShopControlClient.exe.config
