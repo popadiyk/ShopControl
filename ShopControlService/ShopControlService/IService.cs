@@ -13,5 +13,7 @@ namespace ShopControlService
     {
         [OperationContract]
         void DoWork();
+
+        
     }
 }

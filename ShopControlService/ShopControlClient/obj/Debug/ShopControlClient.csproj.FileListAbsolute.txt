@@ -1,1 +1,17 @@
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\bin\Debug\ShopControlClient.exe.config
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\bin\Debug\ShopControlClient.exe
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\bin\Debug\ShopControlClient.pdb
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.csprojResolveAssemblyReference.cache
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.MainForm.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.Properties.Resources.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.csproj.GenerateResource.Cache
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.exe
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.pdb
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.ucClientCatalog.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.ucManufacturerCatalog.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.ucProductGroup.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.ucProductsCatalog.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.ucMenuCashier.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.ucPurchaseCatalog.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.ucSaleCatalog.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.ucWriteOffCatalog.resources

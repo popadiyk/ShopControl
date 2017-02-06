@@ -149,6 +149,12 @@
       <DependentUpon>201702031314095_CreateDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopControlClient\ShopControlClient.csproj">
+      <Project>{f7b8b462-6e33-4dc2-bbbd-494fdb05f1f7}</Project>
+      <Name>ShopControlClient</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

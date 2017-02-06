@@ -54,6 +54,57 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucClientCatalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucClientCatalog.Designer.cs">
+      <DependentUpon>ucClientCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucManufacturerCatalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucManufacturerCatalog.Designer.cs">
+      <DependentUpon>ucManufacturerCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMenuCashier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMenuCashier.Designer.cs">
+      <DependentUpon>ucMenuCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucProductGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProductGroup.Designer.cs">
+      <DependentUpon>ucProductGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucProductsCatalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProductsCatalog.Designer.cs">
+      <DependentUpon>ucProductsCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPurchaseCatalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPurchaseCatalog.Designer.cs">
+      <DependentUpon>ucPurchaseCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSaleCatalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSaleCatalog.Designer.cs">
+      <DependentUpon>ucSaleCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucWriteOffCatalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucWriteOffCatalog.Designer.cs">
+      <DependentUpon>ucWriteOffCatalog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +113,32 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ucClientCatalog.resx">
+      <DependentUpon>ucClientCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucManufacturerCatalog.resx">
+      <DependentUpon>ucManufacturerCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMenuCashier.resx">
+      <DependentUpon>ucMenuCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProductGroup.resx">
+      <DependentUpon>ucProductGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProductsCatalog.resx">
+      <DependentUpon>ucProductsCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPurchaseCatalog.resx">
+      <DependentUpon>ucPurchaseCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSaleCatalog.resx">
+      <DependentUpon>ucSaleCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucWriteOffCatalog.resx">
+      <DependentUpon>ucWriteOffCatalog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +151,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change3030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete3030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add3030.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
