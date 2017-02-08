@@ -1,0 +1,6 @@
+[0207/114743:ERROR:gl_surface_egl.cc(486)] eglInitialize D3D11 failed with error EGL_NOT_INITIALIZED, trying next display type
+[0207/114743:ERROR:gl_surface_egl.cc(486)] eglInitialize D3D9 failed with error EGL_NOT_INITIALIZED
+[0207/114743:ERROR:gl_surface_egl.cc(486)] eglInitialize D3D11 failed with error EGL_NOT_INITIALIZED, trying next display type
+[0207/114743:ERROR:gl_surface_egl.cc(486)] eglInitialize D3D9 failed with error EGL_NOT_INITIALIZED
+[0207/114743:ERROR:gl_surface_win.cc(170)] GLSurfaceEGL::InitializeOneOff failed.
+[0207/114744:ERROR:gpu_child_thread.cc(227)] Exiting GPU process due to errors during initialization

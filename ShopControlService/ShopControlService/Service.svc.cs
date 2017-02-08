@@ -12,9 +12,34 @@ namespace ShopControlService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service.svc or Service.svc.cs at the Solution Explorer and start debugging.
     public class Service : IService
     {
-        public void DoWork()
+        public List<ClientCatalog> ClientCatalogList()
         {
-            
+            using (DataContext db = new DataContext())
+            {
+                return db.TClientCatalog.ToList();
+            } 
         }
+
+        void IService.AddNewClient(string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl)
+        {
+            using (DataContext db = new DataContext())
+            {
+                ClientCatalog newClient = new ClientCatalog
+                {
+                    CreateDate = DateTime.Now,
+                    Name = NameCl,
+                    Descripton = DescriptionCl,
+                    Discount = DiscountCl,
+                    CardNumber = CardNumberCl,
+                    PhoneNumber = PhoneNumberCl,
+                    BirthDate = BirthDateCl
+                };
+                    
+                db.TClientCatalog.Add(newClient);
+                db.SaveChanges();
+
+            }
+        }
+
     }
 }

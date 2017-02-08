@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1677/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ShopControlService" />
+  <xs:element name="AddNewClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NameCl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DescriptionCl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiscountCl" type="xs:int" />
+        <xs:element minOccurs="0" name="CardNumberCl" type="xs:int" />
+        <xs:element minOccurs="0" name="PhoneNumberCl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BirthDateCl" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewClientResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClientCatalogList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClientCatalogListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ShopControlService" minOccurs="0" name="ClientCatalogListResult" nillable="true" type="q1:ArrayOfClientCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

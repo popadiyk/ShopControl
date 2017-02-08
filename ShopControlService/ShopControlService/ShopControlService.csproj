@@ -115,6 +115,10 @@
     <Compile Include="Migrations\201702031314095_CreateDB.Designer.cs">
       <DependentUpon>201702031314095_CreateDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702081350132_ChangeClientCatalog.cs" />
+    <Compile Include="Migrations\201702081350132_ChangeClientCatalog.Designer.cs">
+      <DependentUpon>201702081350132_ChangeClientCatalog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductGroup.cs" />
     <Compile Include="ProductsCatalog.cs" />
@@ -147,6 +151,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201702031314095_CreateDB.resx">
       <DependentUpon>201702031314095_CreateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702081350132_ChangeClientCatalog.resx">
+      <DependentUpon>201702081350132_ChangeClientCatalog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

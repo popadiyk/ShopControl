@@ -15,20 +15,62 @@ namespace ShopControlClient
         public MainForm()
         {
             InitializeComponent();
+            formAddNewClient = new FormAddNewClient();
         }
+
+        FormAddNewClient formAddNewClient;
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            // ініцалізуємо, що в нас за ЮзерКонтрол в момент натискання батона
+            string myControl = string.Empty;
+            var list = this.panel.Controls;
+            foreach (var control in list)
+            {
+                myControl = control.GetType().Name;
+                break;
+            }
 
+            // перевіряємо, що в нас за ЮзерКонтрол в момент натискання батона
+            switch (myControl)
+            {
+                case "ucClientCatalog":
+                    formAddNewClient.ShowDialog();                   
+                    break;
+                case "ucManufacturerCatalog":
+                    MessageBox.Show(myControl);
+                    break;
+                case "ucMenuCashier":
+                    MessageBox.Show(myControl);
+                    break;
+                case "ucProductGroup":
+                    MessageBox.Show(myControl);
+                    break;
+                case "ucProductsCatalog":
+                    MessageBox.Show(myControl);
+                    break;
+                case "ucPurchaseCatalog":
+                    MessageBox.Show(myControl);
+                    break;
+                case "ucSaleCatalog":
+                    MessageBox.Show(myControl);
+                    break;
+                case "ucWriteOffCatalog":
+                    MessageBox.Show(myControl);
+                    break;
+
+
+            }
         }
 
         private void ClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             if (!panel.Controls.Contains(ucClientCatalog.Instance))
             {
                 panel.Controls.Add(ucClientCatalog.Instance);
@@ -122,6 +164,11 @@ namespace ShopControlClient
             }
             else
                 ucWriteOffCatalog.Instance.BringToFront();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }
