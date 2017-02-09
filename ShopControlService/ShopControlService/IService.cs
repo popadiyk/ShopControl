@@ -12,7 +12,7 @@ namespace ShopControlService
     public interface IService
     {
         [OperationContract]
-        void AddNewClient(string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl);
+        void AddNewClient(int IdCl, string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl);
         [OperationContract]
         List<ClientCatalog> ClientCatalogList();
     }

@@ -20,12 +20,13 @@ namespace ShopControlService
             } 
         }
 
-        void IService.AddNewClient(string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl)
+        void IService.AddNewClient(int IdCl, string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl)
         {
             using (DataContext db = new DataContext())
             {
                 ClientCatalog newClient = new ClientCatalog
                 {
+                    ID = IdCl,
                     CreateDate = DateTime.Now,
                     Name = NameCl,
                     Descripton = DescriptionCl,

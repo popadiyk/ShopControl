@@ -170,5 +170,12 @@ namespace ShopControlClient
         {
             
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            var control = (ISelected)panel.Controls[0];
+            int id = control.GetSelectedId();
+            MessageBox.Show(id.ToString());
+        }
     }
 }
