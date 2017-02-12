@@ -21,6 +21,12 @@ namespace ShopControlClient
 
         private void FormAddNewClient_FormClosing(object sender, FormClosingEventArgs e)
         {
+            txtBoxName.Text = "";
+            txtBoxDescripton.Text = "";
+            txtBoxDiscount.Text = "";
+            txtBoxCardNumber.Text = "";
+            txtBoxPhoneNumber.Text = "";
+            dateTimePickerAddClient.Value = DateTime.Now;
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -44,6 +50,40 @@ namespace ShopControlClient
                 MessageBox.Show(ex.ToString());
             }
             //MessageBox.Show(dateTimePickerAddClient.Text.ToString());
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int _id = Convert.ToInt32(Tag.ToString());
+                loClient.UpdateClient(_id,txtBoxName.Text, txtBoxDescripton.Text, Convert.ToInt32(txtBoxDiscount.Text.Trim()), Convert.ToInt32(txtBoxCardNumber.Text.Trim()), txtBoxPhoneNumber.Text, dateTimePickerAddClient.Value);
+                txtBoxName.Text = "";
+                txtBoxDescripton.Text = "";
+                txtBoxDiscount.Text = "";
+                txtBoxCardNumber.Text = "";
+                txtBoxPhoneNumber.Text = "";
+                dateTimePickerAddClient.Value = DateTime.Now;
+
+                ucClientCatalog.Instance.ReloadList();
+
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+            txtBoxName.Text = "";
+            txtBoxDescripton.Text = "";
+            txtBoxDiscount.Text = "";
+            txtBoxCardNumber.Text = "";
+            txtBoxPhoneNumber.Text = "";
+            dateTimePickerAddClient.Value = DateTime.Now;
         }
     }
 }

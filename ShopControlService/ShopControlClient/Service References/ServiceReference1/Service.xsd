@@ -30,4 +30,48 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="UpdateClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdCl" type="xs:int" />
+        <xs:element minOccurs="0" name="NameCl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DescriptionCl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiscountCl" type="xs:int" />
+        <xs:element minOccurs="0" name="CardNumberCl" type="xs:int" />
+        <xs:element minOccurs="0" name="PhoneNumberCl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BirthDateCl" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateClientResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindClientById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindClientByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ShopControlService" minOccurs="0" name="FindClientByIdResult" nillable="true" type="q2:ClientCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteClientResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

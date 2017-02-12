@@ -36,6 +36,8 @@ C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlS
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\Microsoft.AI.Web.dll
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\Microsoft.AI.WindowsServer.dll
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\ShopControlClient.exe
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\ShopControlClient.pdb
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\EntityFramework.xml
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\EntityFramework.SqlServer.xml
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\Microsoft.AI.DependencyCollector.xml
@@ -45,9 +47,7 @@ C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlS
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\Microsoft.ApplicationInsights.xml
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.csprojResolveAssemblyReference.cache
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.CreateDB.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.ChangeClientCatalog.resources
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.csproj.GenerateResource.Cache
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.dll
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.pdb
-C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\ShopControlClient.exe
-C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\bin\ShopControlClient.pdb
-C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.ChangeClientCatalog.resources

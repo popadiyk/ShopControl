@@ -209,6 +209,24 @@ namespace ShopControlClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ClientCatalogList", ReplyAction="http://tempuri.org/IService/ClientCatalogListResponse")]
         System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ClientCatalog[]> ClientCatalogListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateClient", ReplyAction="http://tempuri.org/IService/UpdateClientResponse")]
+        void UpdateClient(int IdCl, string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, System.DateTime BirthDateCl);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateClient", ReplyAction="http://tempuri.org/IService/UpdateClientResponse")]
+        System.Threading.Tasks.Task UpdateClientAsync(int IdCl, string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, System.DateTime BirthDateCl);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/FindClientById", ReplyAction="http://tempuri.org/IService/FindClientByIdResponse")]
+        ShopControlClient.ServiceReference1.ClientCatalog FindClientById(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/FindClientById", ReplyAction="http://tempuri.org/IService/FindClientByIdResponse")]
+        System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ClientCatalog> FindClientByIdAsync(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteClient", ReplyAction="http://tempuri.org/IService/DeleteClientResponse")]
+        void DeleteClient(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteClient", ReplyAction="http://tempuri.org/IService/DeleteClientResponse")]
+        System.Threading.Tasks.Task DeleteClientAsync(int _id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -252,6 +270,30 @@ namespace ShopControlClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ClientCatalog[]> ClientCatalogListAsync() {
             return base.Channel.ClientCatalogListAsync();
+        }
+        
+        public void UpdateClient(int IdCl, string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, System.DateTime BirthDateCl) {
+            base.Channel.UpdateClient(IdCl, NameCl, DescriptionCl, DiscountCl, CardNumberCl, PhoneNumberCl, BirthDateCl);
+        }
+        
+        public System.Threading.Tasks.Task UpdateClientAsync(int IdCl, string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, System.DateTime BirthDateCl) {
+            return base.Channel.UpdateClientAsync(IdCl, NameCl, DescriptionCl, DiscountCl, CardNumberCl, PhoneNumberCl, BirthDateCl);
+        }
+        
+        public ShopControlClient.ServiceReference1.ClientCatalog FindClientById(int _id) {
+            return base.Channel.FindClientById(_id);
+        }
+        
+        public System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ClientCatalog> FindClientByIdAsync(int _id) {
+            return base.Channel.FindClientByIdAsync(_id);
+        }
+        
+        public void DeleteClient(int _id) {
+            base.Channel.DeleteClient(_id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteClientAsync(int _id) {
+            return base.Channel.DeleteClientAsync(_id);
         }
     }
 }

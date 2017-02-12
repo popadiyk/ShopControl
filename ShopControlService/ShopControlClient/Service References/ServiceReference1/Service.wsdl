@@ -19,6 +19,24 @@
   <wsdl:message name="IService_ClientCatalogList_OutputMessage">
     <wsdl:part name="parameters" element="tns:ClientCatalogListResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_UpdateClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClient" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_FindClientById_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindClientById" />
+  </wsdl:message>
+  <wsdl:message name="IService_FindClientById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindClientByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClient" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClientResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="AddNewClient">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/AddNewClient" message="tns:IService_AddNewClient_InputMessage" />
@@ -27,6 +45,18 @@
     <wsdl:operation name="ClientCatalogList">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/ClientCatalogList" message="tns:IService_ClientCatalogList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/ClientCatalogListResponse" message="tns:IService_ClientCatalogList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateClient" message="tns:IService_UpdateClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateClientResponse" message="tns:IService_UpdateClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindClientById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/FindClientById" message="tns:IService_FindClientById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/FindClientByIdResponse" message="tns:IService_FindClientById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteClient" message="tns:IService_DeleteClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteClientResponse" message="tns:IService_DeleteClient_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -42,6 +72,33 @@
     </wsdl:operation>
     <wsdl:operation name="ClientCatalogList">
       <soap:operation soapAction="http://tempuri.org/IService/ClientCatalogList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClient">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindClientById">
+      <soap:operation soapAction="http://tempuri.org/IService/FindClientById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClient">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteClient" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

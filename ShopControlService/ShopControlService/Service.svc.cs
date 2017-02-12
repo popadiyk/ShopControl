@@ -20,13 +20,12 @@ namespace ShopControlService
             } 
         }
 
-        void IService.AddNewClient(int IdCl, string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl)
+        void IService.AddNewClient(string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl)
         {
             using (DataContext db = new DataContext())
             {
                 ClientCatalog newClient = new ClientCatalog
                 {
-                    ID = IdCl,
                     CreateDate = DateTime.Now,
                     Name = NameCl,
                     Descripton = DescriptionCl,
@@ -34,11 +33,50 @@ namespace ShopControlService
                     CardNumber = CardNumberCl,
                     PhoneNumber = PhoneNumberCl,
                     BirthDate = BirthDateCl
-                };
-                    
+                };                 
                 db.TClientCatalog.Add(newClient);
                 db.SaveChanges();
+            }
+        }
 
+        void IService.UpdateClient(int IdCl, string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl)
+        {
+            using (DataContext db = new DataContext())
+            {
+                ClientCatalog changedClient = db.TClientCatalog
+                    .Where(c => c.ID == IdCl)
+                    .FirstOrDefault();
+                changedClient.Name = NameCl;
+                changedClient.Descripton = DescriptionCl;
+                changedClient.Discount = DiscountCl;
+                changedClient.CardNumber = CardNumberCl;
+                changedClient.PhoneNumber = PhoneNumberCl;
+                changedClient.BirthDate = BirthDateCl;
+                db.SaveChanges();
+            }
+        }
+
+        public ClientCatalog FindClientById(int _id)
+        {
+            using (DataContext db = new DataContext())
+            {
+                ClientCatalog findClient = db.TClientCatalog
+                    .Where(c => c.ID == _id)
+                    .FirstOrDefault();
+                return findClient;
+             }
+        }
+
+        void IService.DeleteClient(int _id)
+        {
+            using (DataContext db = new DataContext())
+            {
+                ClientCatalog findClient = db.TClientCatalog
+                    .Where(c => c.ID == _id)
+                    .FirstOrDefault();
+                db.TClientCatalog.Remove(findClient);
+                db.SaveChanges();
+                
             }
         }
 
