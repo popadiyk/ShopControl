@@ -59,25 +59,25 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelForPhoto = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelForInfo = new System.Windows.Forms.Panel();
-            this.panelForMenu = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel = new System.Windows.Forms.Panel();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabCashNal = new System.Windows.Forms.TabPage();
             this.tabCashBeznal = new System.Windows.Forms.TabPage();
             this.tabCashTotal = new System.Windows.Forms.TabPage();
+            this.panelForMenu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panelForPhoto.SuspendLayout();
             this.panelForInfo.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.panelForMenu.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -121,6 +121,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(34, 34);
             this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // menuStrip1
             // 
@@ -339,6 +340,15 @@
             this.panelForPhoto.Size = new System.Drawing.Size(245, 237);
             this.panelForPhoto.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(97, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "ФОТО";
+            // 
             // panelForInfo
             // 
             this.panelForInfo.BackColor = System.Drawing.SystemColors.Control;
@@ -348,37 +358,6 @@
             this.panelForInfo.Name = "panelForInfo";
             this.panelForInfo.Size = new System.Drawing.Size(245, 79);
             this.panelForInfo.TabIndex = 1;
-            // 
-            // panelForMenu
-            // 
-            this.panelForMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panelForMenu.Controls.Add(this.label1);
-            this.panelForMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForMenu.Location = new System.Drawing.Point(3, 3);
-            this.panelForMenu.Name = "panelForMenu";
-            this.panelForMenu.Size = new System.Drawing.Size(245, 333);
-            this.panelForMenu.TabIndex = 2;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.panel, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(260, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1087, 667);
-            this.tableLayoutPanel3.TabIndex = 9;
-            // 
-            // panel
-            // 
-            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.Location = new System.Drawing.Point(3, 3);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1081, 661);
-            this.panel.TabIndex = 8;
             // 
             // tabControl
             // 
@@ -423,6 +402,16 @@
             this.tabCashTotal.Text = "Всего";
             this.tabCashTotal.UseVisualStyleBackColor = true;
             // 
+            // panelForMenu
+            // 
+            this.panelForMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panelForMenu.Controls.Add(this.label1);
+            this.panelForMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelForMenu.Location = new System.Drawing.Point(3, 3);
+            this.panelForMenu.Name = "panelForMenu";
+            this.panelForMenu.Size = new System.Drawing.Size(245, 333);
+            this.panelForMenu.TabIndex = 2;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -432,14 +421,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Тут будет вертикальное меню";
             // 
-            // label2
+            // tableLayoutPanel3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ФОТО";
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.panel, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(260, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1087, 667);
+            this.tableLayoutPanel3.TabIndex = 9;
+            // 
+            // panel
+            // 
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Location = new System.Drawing.Point(3, 3);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1081, 661);
+            this.panel.TabIndex = 8;
             // 
             // MainForm
             // 
@@ -464,10 +465,10 @@
             this.panelForPhoto.ResumeLayout(false);
             this.panelForPhoto.PerformLayout();
             this.panelForInfo.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.panelForMenu.ResumeLayout(false);
             this.panelForMenu.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

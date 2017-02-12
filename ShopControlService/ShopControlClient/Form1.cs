@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShopControlClient.ServiceReference1;
 
 namespace ShopControlClient
 {
@@ -16,8 +17,11 @@ namespace ShopControlClient
         {
             InitializeComponent();
             formAddNewClient = new FormAddNewClient();
+            panel.Controls.Add(ucMenuCashier.Instance);
+            ucMenuCashier.Instance.Dock = DockStyle.Fill;
+            ucMenuCashier.Instance.BringToFront();
         }
-
+        private ServiceClient loClient = new ServiceClient();
         FormAddNewClient formAddNewClient;
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,6 +44,8 @@ namespace ShopControlClient
             switch (myControl)
             {
                 case "ucClientCatalog":
+                    formAddNewClient.Controls["btnApply"].Enabled = false;
+                    formAddNewClient.Controls["btnOK"].Enabled = true;
                     formAddNewClient.ShowDialog();                   
                     break;
                 case "ucManufacturerCatalog":
@@ -173,9 +179,107 @@ namespace ShopControlClient
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            var control = (ISelected)panel.Controls[0];
-            int id = control.GetSelectedId();
-            MessageBox.Show(id.ToString());
+            
+            // перевіряємо, що в нас за ЮзерКонтрол в момент натискання батона
+            switch (panel.Controls[0].Name)
+            {
+
+                case "ucClientCatalog":
+                    var control = (ISelected)panel.Controls[0];
+                    int id = control.GetSelectedId();
+                    ClientCatalog changedClient = loClient.FindClientById(id);
+                    if (id != -1) {
+                        // заповнюємо форму
+                        formAddNewClient.Text = "Изменить текущего клиента";
+                        formAddNewClient.Controls["btnApply"].Enabled = true;
+                        formAddNewClient.Controls["btnOK"].Enabled = false;
+                        formAddNewClient.Tag = id;
+
+                        formAddNewClient.Controls["txtBoxName"].Text = changedClient.Name;
+                        formAddNewClient.Controls["txtBoxDescripton"].Text = changedClient.Descripton;
+                        formAddNewClient.Controls["panel1"].Controls["txtBoxDiscount"].Text = changedClient.Discount.ToString();
+                        formAddNewClient.Controls["panel1"].Controls["txtBoxCardNumber"].Text = changedClient.CardNumber.ToString();
+                        formAddNewClient.Controls["panel1"].Controls["txtBoxPhoneNumber"].Text = changedClient.PhoneNumber;
+                        formAddNewClient.Controls["panel1"].Controls["dateTimePickerAddClient"].Text = changedClient.BirthDate.ToString();
+
+
+                        formAddNewClient.ShowDialog();
+                    } else
+                    {
+                        MessageBox.Show("Не выбран елемент!");
+                    }
+                    
+                    break;
+                case "ucManufacturerCatalog":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucMenuCashier":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucProductGroup":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucProductsCatalog":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucPurchaseCatalog":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucSaleCatalog":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucWriteOffCatalog":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+
+
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            switch (panel.Controls[0].Name)
+            {
+                case "ucClientCatalog":
+                    var control = (ISelected)panel.Controls[0];
+                    int id = control.GetSelectedId();
+                    if (id != -1)
+                    {
+                        if (MessageBox.Show("Вы уверены?", "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) == DialogResult.OK)
+                        {
+                            loClient.DeleteClient(id);
+                            ucClientCatalog.Instance.ReloadList();
+                        }
+                    } else
+                    {
+                        MessageBox.Show("Не выбран елемент!");
+                    }
+
+                    break;
+                case "ucManufacturerCatalog":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucMenuCashier":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucProductGroup":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucProductsCatalog":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucPurchaseCatalog":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucSaleCatalog":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+                case "ucWriteOffCatalog":
+                    MessageBox.Show(panel.Controls[0].Name);
+                    break;
+
+
+            }
         }
     }
 }

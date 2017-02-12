@@ -12,8 +12,14 @@ namespace ShopControlService
     public interface IService
     {
         [OperationContract]
-        void AddNewClient(int IdCl, string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl);
+        void AddNewClient(string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl);
         [OperationContract]
         List<ClientCatalog> ClientCatalogList();
+        [OperationContract]
+        void UpdateClient(int IdCl, string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl);
+        [OperationContract]
+        ClientCatalog FindClientById(int _id);
+        [OperationContract]
+        void DeleteClient(int _id);
     }
 }
