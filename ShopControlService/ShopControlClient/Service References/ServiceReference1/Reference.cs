@@ -152,6 +152,7 @@ namespace ShopControlClient.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityId", Namespace="http://schemas.datacontract.org/2004/07/ShopControlService")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ShopControlClient.ServiceReference1.ManufacturerCatalog))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ShopControlClient.ServiceReference1.ClientCatalog))]
     public partial class EntityId : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -194,6 +195,189 @@ namespace ShopControlClient.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ManufacturerCatalog", Namespace="http://schemas.datacontract.org/2004/07/ShopControlService")]
+    [System.SerializableAttribute()]
+    public partial class ManufacturerCatalog : ShopControlClient.ServiceReference1.EntityId {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BankField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EDERPOUField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string INNField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsRealizationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MFOField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RRField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float SumDebtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WebSiteField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Bank {
+            get {
+                return this.BankField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BankField, value) != true)) {
+                    this.BankField = value;
+                    this.RaisePropertyChanged("Bank");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EDERPOU {
+            get {
+                return this.EDERPOUField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EDERPOUField, value) != true)) {
+                    this.EDERPOUField = value;
+                    this.RaisePropertyChanged("EDERPOU");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string INN {
+            get {
+                return this.INNField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.INNField, value) != true)) {
+                    this.INNField = value;
+                    this.RaisePropertyChanged("INN");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsRealization {
+            get {
+                return this.IsRealizationField;
+            }
+            set {
+                if ((this.IsRealizationField.Equals(value) != true)) {
+                    this.IsRealizationField = value;
+                    this.RaisePropertyChanged("IsRealization");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MFO {
+            get {
+                return this.MFOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MFOField, value) != true)) {
+                    this.MFOField = value;
+                    this.RaisePropertyChanged("MFO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RR {
+            get {
+                return this.RRField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RRField, value) != true)) {
+                    this.RRField = value;
+                    this.RaisePropertyChanged("RR");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float SumDebt {
+            get {
+                return this.SumDebtField;
+            }
+            set {
+                if ((this.SumDebtField.Equals(value) != true)) {
+                    this.SumDebtField = value;
+                    this.RaisePropertyChanged("SumDebt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WebSite {
+            get {
+                return this.WebSiteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WebSiteField, value) != true)) {
+                    this.WebSiteField = value;
+                    this.RaisePropertyChanged("WebSite");
+                }
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService")]
     public interface IService {
@@ -227,6 +411,36 @@ namespace ShopControlClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteClient", ReplyAction="http://tempuri.org/IService/DeleteClientResponse")]
         System.Threading.Tasks.Task DeleteClientAsync(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ManufacturerCatalogList", ReplyAction="http://tempuri.org/IService/ManufacturerCatalogListResponse")]
+        ShopControlClient.ServiceReference1.ManufacturerCatalog[] ManufacturerCatalogList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ManufacturerCatalogList", ReplyAction="http://tempuri.org/IService/ManufacturerCatalogListResponse")]
+        System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ManufacturerCatalog[]> ManufacturerCatalogListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddNewManufacturer", ReplyAction="http://tempuri.org/IService/AddNewManufacturerResponse")]
+        void AddNewManufacturer(string NameMan, string PhoneMan, string EmailMan, string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan, string RRMan, string BankMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddNewManufacturer", ReplyAction="http://tempuri.org/IService/AddNewManufacturerResponse")]
+        System.Threading.Tasks.Task AddNewManufacturerAsync(string NameMan, string PhoneMan, string EmailMan, string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan, string RRMan, string BankMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateManufacturer", ReplyAction="http://tempuri.org/IService/UpdateManufacturerResponse")]
+        void UpdateManufacturer();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateManufacturer", ReplyAction="http://tempuri.org/IService/UpdateManufacturerResponse")]
+        System.Threading.Tasks.Task UpdateManufacturerAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteManufacturer", ReplyAction="http://tempuri.org/IService/DeleteManufacturerResponse")]
+        void DeleteManufacturer();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteManufacturer", ReplyAction="http://tempuri.org/IService/DeleteManufacturerResponse")]
+        System.Threading.Tasks.Task DeleteManufacturerAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/FindManufacturerById", ReplyAction="http://tempuri.org/IService/FindManufacturerByIdResponse")]
+        ShopControlClient.ServiceReference1.ManufacturerCatalog FindManufacturerById(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/FindManufacturerById", ReplyAction="http://tempuri.org/IService/FindManufacturerByIdResponse")]
+        System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ManufacturerCatalog> FindManufacturerByIdAsync(int _id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -294,6 +508,46 @@ namespace ShopControlClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task DeleteClientAsync(int _id) {
             return base.Channel.DeleteClientAsync(_id);
+        }
+        
+        public ShopControlClient.ServiceReference1.ManufacturerCatalog[] ManufacturerCatalogList() {
+            return base.Channel.ManufacturerCatalogList();
+        }
+        
+        public System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ManufacturerCatalog[]> ManufacturerCatalogListAsync() {
+            return base.Channel.ManufacturerCatalogListAsync();
+        }
+        
+        public void AddNewManufacturer(string NameMan, string PhoneMan, string EmailMan, string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan, string RRMan, string BankMan) {
+            base.Channel.AddNewManufacturer(NameMan, PhoneMan, EmailMan, WebsiteMan, IsRealizMan, INNMan, EDRPOUMan, MFOMan, RRMan, BankMan);
+        }
+        
+        public System.Threading.Tasks.Task AddNewManufacturerAsync(string NameMan, string PhoneMan, string EmailMan, string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan, string RRMan, string BankMan) {
+            return base.Channel.AddNewManufacturerAsync(NameMan, PhoneMan, EmailMan, WebsiteMan, IsRealizMan, INNMan, EDRPOUMan, MFOMan, RRMan, BankMan);
+        }
+        
+        public void UpdateManufacturer() {
+            base.Channel.UpdateManufacturer();
+        }
+        
+        public System.Threading.Tasks.Task UpdateManufacturerAsync() {
+            return base.Channel.UpdateManufacturerAsync();
+        }
+        
+        public void DeleteManufacturer() {
+            base.Channel.DeleteManufacturer();
+        }
+        
+        public System.Threading.Tasks.Task DeleteManufacturerAsync() {
+            return base.Channel.DeleteManufacturerAsync();
+        }
+        
+        public ShopControlClient.ServiceReference1.ManufacturerCatalog FindManufacturerById(int _id) {
+            return base.Channel.FindManufacturerById(_id);
+        }
+        
+        public System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ManufacturerCatalog> FindManufacturerByIdAsync(int _id) {
+            return base.Channel.FindManufacturerByIdAsync(_id);
         }
     }
 }

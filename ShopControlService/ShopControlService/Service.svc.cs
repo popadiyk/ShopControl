@@ -12,7 +12,8 @@ namespace ShopControlService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service.svc or Service.svc.cs at the Solution Explorer and start debugging.
     public class Service : IService
     {
-        public List<ClientCatalog> ClientCatalogList()
+        // -------------------- КЛІЄНТ КАТАЛОГ ----------------------- //
+        List<ClientCatalog> IService.ClientCatalogList()
         {
             using (DataContext db = new DataContext())
             {
@@ -56,7 +57,7 @@ namespace ShopControlService
             }
         }
 
-        public ClientCatalog FindClientById(int _id)
+        ClientCatalog IService.FindClientById(int _id)
         {
             using (DataContext db = new DataContext())
             {
@@ -79,6 +80,64 @@ namespace ShopControlService
                 
             }
         }
+        // ----КІНЕЦЬ---------------- КЛІЄНТ КАТАЛОГ ----------------------- //
+
+        // -------------------- ВИРОБНИКИ КАТАЛОГ ----------------------- //
+
+        List<ManufacturerCatalog> IService.ManufacturerCatalogList()
+        {
+            using (DataContext db = new DataContext())
+            {
+                return db.TManufacturerCatalog.ToList();
+            }
+        }
+
+        void IService.AddNewManufacturer(string NameMan, string PhoneMan, string EmailMan,
+            string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan,
+            string RRMan, string BankMan)
+        {
+            using (DataContext db = new DataContext())
+            {
+                ManufacturerCatalog newManufacturer = new ManufacturerCatalog
+                {
+                    Name = NameMan,
+                    Phone = PhoneMan,
+                    Email = EmailMan,
+                    WebSite = WebsiteMan,
+                    IsRealization = IsRealizMan,
+                    INN = INNMan,
+                    EDERPOU = EDRPOUMan,
+                    MFO = MFOMan,
+                    RR = RRMan,
+                    Bank = BankMan
+                };
+                db.TManufacturerCatalog.Add(newManufacturer);
+                db.SaveChanges();
+            }
+        }
+
+        void IService.UpdateManufacturer()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IService.DeleteManufacturer()
+        {
+            throw new NotImplementedException();
+        }
+
+        ManufacturerCatalog IService.FindManufacturerById(int _id)
+        {
+            using (DataContext db = new DataContext())
+            {
+                ManufacturerCatalog findManufacturer = db.TManufacturerCatalog
+                    .Where(c => c.ID == _id)
+                    .FirstOrDefault();
+                return findManufacturer;
+            }
+        }
+
+        // -----КІНЕЦЬ--------------- ВИРОБНИКИ КАТАЛОГ ----------------------- //
 
     }
-}
+    }

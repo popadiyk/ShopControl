@@ -11,6 +11,8 @@ namespace ShopControlService
     [ServiceContract]
     public interface IService
     {
+        // -------------------- КЛІЄНТИ КАТАЛОГ ----------------------- //
+
         [OperationContract]
         void AddNewClient(string NameCl, string DescriptionCl, int DiscountCl, int CardNumberCl, string PhoneNumberCl, DateTime BirthDateCl);
         [OperationContract]
@@ -21,5 +23,24 @@ namespace ShopControlService
         ClientCatalog FindClientById(int _id);
         [OperationContract]
         void DeleteClient(int _id);
+        // ----КІНЕЦЬ---------------- КЛІЄНТИ КАТАЛОГ ----------------------- //
+
+        // -------------------- ВИРОБНИКИ КАТАЛОГ ----------------------- //
+        [OperationContract]
+        List<ManufacturerCatalog> ManufacturerCatalogList();
+        [OperationContract]
+        void AddNewManufacturer(string NameMan, string PhoneMan, string EmailMan,
+            string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan,
+            string RRMan, string BankMan);
+        [OperationContract]
+        void UpdateManufacturer();
+        [OperationContract]
+        void DeleteManufacturer();
+        [OperationContract]
+        ManufacturerCatalog FindManufacturerById(int _id); 
+
+
+        // ----КІНЕЦЬ---------------- ВИРОБНИКИ КАТАЛОГ ----------------------- //
+
     }
 }
