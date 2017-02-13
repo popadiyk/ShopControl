@@ -65,8 +65,22 @@
             this.tabCashNal = new System.Windows.Forms.TabPage();
             this.tabCashBeznal = new System.Windows.Forms.TabPage();
             this.tabCashTotal = new System.Windows.Forms.TabPage();
-            this.panelForMenu = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStripMainMenu = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStrBtnMenuCashier = new System.Windows.Forms.ToolStripButton();
+            this.toolStrBtnProdazhi = new System.Windows.Forms.ToolStripButton();
+            this.toolStrBtnZakupki = new System.Windows.Forms.ToolStripButton();
+            this.toolStrBtnSpisanie = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStrBtnGroupProducts = new System.Windows.Forms.ToolStripButton();
+            this.toolStrBtnProductsCatalog = new System.Windows.Forms.ToolStripButton();
+            this.toolStrBtnManufacturer = new System.Windows.Forms.ToolStripButton();
+            this.toolStrBtnClient = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
@@ -76,7 +90,8 @@
             this.panelForPhoto.SuspendLayout();
             this.panelForInfo.SuspendLayout();
             this.tabControl.SuspendLayout();
-            this.panelForMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.toolStripMainMenu.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,28 +209,28 @@
             // MenuCasiraToolStripMenuItem
             // 
             this.MenuCasiraToolStripMenuItem.Name = "MenuCasiraToolStripMenuItem";
-            this.MenuCasiraToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.MenuCasiraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.MenuCasiraToolStripMenuItem.Text = "Меню касира";
             this.MenuCasiraToolStripMenuItem.Click += new System.EventHandler(this.MenuCasiraToolStripMenuItem_Click);
             // 
             // prodazhiToolStripMenuItem
             // 
             this.prodazhiToolStripMenuItem.Name = "prodazhiToolStripMenuItem";
-            this.prodazhiToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.prodazhiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.prodazhiToolStripMenuItem.Text = "Продажи";
             this.prodazhiToolStripMenuItem.Click += new System.EventHandler(this.prodazhiToolStripMenuItem_Click);
             // 
             // zakupkiToolStripMenuItem
             // 
             this.zakupkiToolStripMenuItem.Name = "zakupkiToolStripMenuItem";
-            this.zakupkiToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.zakupkiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.zakupkiToolStripMenuItem.Text = "Закупки";
             this.zakupkiToolStripMenuItem.Click += new System.EventHandler(this.zakupkiToolStripMenuItem_Click);
             // 
             // spisanieToolStripMenuItem
             // 
             this.spisanieToolStripMenuItem.Name = "spisanieToolStripMenuItem";
-            this.spisanieToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.spisanieToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.spisanieToolStripMenuItem.Text = "Списания";
             this.spisanieToolStripMenuItem.Click += new System.EventHandler(this.spisanieToolStripMenuItem_Click);
             // 
@@ -319,7 +334,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.panelForPhoto, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.panelForInfo, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.panelForMenu, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -333,6 +348,7 @@
             // panelForPhoto
             // 
             this.panelForPhoto.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panelForPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelForPhoto.Controls.Add(this.label2);
             this.panelForPhoto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForPhoto.Location = new System.Drawing.Point(3, 427);
@@ -374,7 +390,7 @@
             // 
             // tabCashNal
             // 
-            this.tabCashNal.BackColor = System.Drawing.SystemColors.Info;
+            this.tabCashNal.BackColor = System.Drawing.Color.White;
             this.tabCashNal.Location = new System.Drawing.Point(4, 22);
             this.tabCashNal.Name = "tabCashNal";
             this.tabCashNal.Padding = new System.Windows.Forms.Padding(3);
@@ -402,24 +418,177 @@
             this.tabCashTotal.Text = "Всего";
             this.tabCashTotal.UseVisualStyleBackColor = true;
             // 
-            // panelForMenu
+            // panel1
             // 
-            this.panelForMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panelForMenu.Controls.Add(this.label1);
-            this.panelForMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForMenu.Location = new System.Drawing.Point(3, 3);
-            this.panelForMenu.Name = "panelForMenu";
-            this.panelForMenu.Size = new System.Drawing.Size(245, 333);
-            this.panelForMenu.TabIndex = 2;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.toolStripMainMenu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(245, 333);
+            this.panel1.TabIndex = 2;
             // 
-            // label1
+            // toolStripMainMenu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Тут будет вертикальное меню";
+            this.toolStripMainMenu.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMainMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStrBtnMenuCashier,
+            this.toolStrBtnProdazhi,
+            this.toolStrBtnZakupki,
+            this.toolStrBtnSpisanie,
+            this.toolStripLabel2,
+            this.toolStrBtnGroupProducts,
+            this.toolStrBtnProductsCatalog,
+            this.toolStrBtnManufacturer,
+            this.toolStrBtnClient,
+            this.toolStripLabel3,
+            this.toolStripButton12,
+            this.toolStripButton13,
+            this.toolStripButton14});
+            this.toolStripMainMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.toolStripMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.toolStripMainMenu.Name = "toolStripMainMenu";
+            this.toolStripMainMenu.Size = new System.Drawing.Size(243, 316);
+            this.toolStripMainMenu.TabIndex = 3;
+            this.toolStripMainMenu.Text = "toolStrip2";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.ActiveLinkColor = System.Drawing.Color.Red;
+            this.toolStripLabel1.BackColor = System.Drawing.Color.Maroon;
+            this.toolStripLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(241, 21);
+            this.toolStripLabel1.Text = "Магазин";
+            // 
+            // toolStrBtnMenuCashier
+            // 
+            this.toolStrBtnMenuCashier.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStrBtnMenuCashier.Image = ((System.Drawing.Image)(resources.GetObject("toolStrBtnMenuCashier.Image")));
+            this.toolStrBtnMenuCashier.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStrBtnMenuCashier.Name = "toolStrBtnMenuCashier";
+            this.toolStrBtnMenuCashier.Size = new System.Drawing.Size(241, 19);
+            this.toolStrBtnMenuCashier.Text = "Меню касира";
+            this.toolStrBtnMenuCashier.Click += new System.EventHandler(this.toolStrBtnMenuCashier_Click);
+            // 
+            // toolStrBtnProdazhi
+            // 
+            this.toolStrBtnProdazhi.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStrBtnProdazhi.Image = ((System.Drawing.Image)(resources.GetObject("toolStrBtnProdazhi.Image")));
+            this.toolStrBtnProdazhi.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStrBtnProdazhi.Name = "toolStrBtnProdazhi";
+            this.toolStrBtnProdazhi.Size = new System.Drawing.Size(241, 19);
+            this.toolStrBtnProdazhi.Text = "Продажи";
+            this.toolStrBtnProdazhi.Click += new System.EventHandler(this.toolStrBtnProdazhi_Click);
+            // 
+            // toolStrBtnZakupki
+            // 
+            this.toolStrBtnZakupki.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStrBtnZakupki.Image = ((System.Drawing.Image)(resources.GetObject("toolStrBtnZakupki.Image")));
+            this.toolStrBtnZakupki.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStrBtnZakupki.Name = "toolStrBtnZakupki";
+            this.toolStrBtnZakupki.Size = new System.Drawing.Size(241, 19);
+            this.toolStrBtnZakupki.Text = "Закупки";
+            this.toolStrBtnZakupki.Click += new System.EventHandler(this.toolStrBtnZakupki_Click);
+            // 
+            // toolStrBtnSpisanie
+            // 
+            this.toolStrBtnSpisanie.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStrBtnSpisanie.Image = ((System.Drawing.Image)(resources.GetObject("toolStrBtnSpisanie.Image")));
+            this.toolStrBtnSpisanie.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStrBtnSpisanie.Name = "toolStrBtnSpisanie";
+            this.toolStrBtnSpisanie.Size = new System.Drawing.Size(241, 19);
+            this.toolStrBtnSpisanie.Text = "Списания";
+            this.toolStrBtnSpisanie.Click += new System.EventHandler(this.toolStrBtnSpisanie_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.toolStripLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(241, 21);
+            this.toolStripLabel2.Text = "Справочники";
+            // 
+            // toolStrBtnGroupProducts
+            // 
+            this.toolStrBtnGroupProducts.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStrBtnGroupProducts.Image = ((System.Drawing.Image)(resources.GetObject("toolStrBtnGroupProducts.Image")));
+            this.toolStrBtnGroupProducts.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStrBtnGroupProducts.Name = "toolStrBtnGroupProducts";
+            this.toolStrBtnGroupProducts.Size = new System.Drawing.Size(241, 19);
+            this.toolStrBtnGroupProducts.Text = "Группы товаров";
+            this.toolStrBtnGroupProducts.Click += new System.EventHandler(this.toolStrBtnGroupProducts_Click);
+            // 
+            // toolStrBtnProductsCatalog
+            // 
+            this.toolStrBtnProductsCatalog.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStrBtnProductsCatalog.Image = ((System.Drawing.Image)(resources.GetObject("toolStrBtnProductsCatalog.Image")));
+            this.toolStrBtnProductsCatalog.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStrBtnProductsCatalog.Name = "toolStrBtnProductsCatalog";
+            this.toolStrBtnProductsCatalog.Size = new System.Drawing.Size(241, 19);
+            this.toolStrBtnProductsCatalog.Text = "Каталог товаров";
+            this.toolStrBtnProductsCatalog.Click += new System.EventHandler(this.toolStrBtnProductsCatalog_Click);
+            // 
+            // toolStrBtnManufacturer
+            // 
+            this.toolStrBtnManufacturer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStrBtnManufacturer.Image = ((System.Drawing.Image)(resources.GetObject("toolStrBtnManufacturer.Image")));
+            this.toolStrBtnManufacturer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStrBtnManufacturer.Name = "toolStrBtnManufacturer";
+            this.toolStrBtnManufacturer.Size = new System.Drawing.Size(241, 19);
+            this.toolStrBtnManufacturer.Text = "Список поставщиков";
+            this.toolStrBtnManufacturer.Click += new System.EventHandler(this.toolStrBtnManufacturer_Click);
+            // 
+            // toolStrBtnClient
+            // 
+            this.toolStrBtnClient.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStrBtnClient.Image = ((System.Drawing.Image)(resources.GetObject("toolStrBtnClient.Image")));
+            this.toolStrBtnClient.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStrBtnClient.Name = "toolStrBtnClient";
+            this.toolStrBtnClient.Size = new System.Drawing.Size(241, 19);
+            this.toolStrBtnClient.Text = "Список покупателей";
+            this.toolStrBtnClient.Click += new System.EventHandler(this.toolStrBtnClient_Click);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.toolStripLabel3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(241, 21);
+            this.toolStripLabel3.Text = "Каса";
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Size = new System.Drawing.Size(241, 19);
+            this.toolStripButton12.Text = "Приход";
+            // 
+            // toolStripButton13
+            // 
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.Size = new System.Drawing.Size(241, 19);
+            this.toolStripButton13.Text = "Расход";
+            // 
+            // toolStripButton14
+            // 
+            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
+            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton14.Name = "toolStripButton14";
+            this.toolStripButton14.Size = new System.Drawing.Size(241, 19);
+            this.toolStripButton14.Text = "Баланс кас";
             // 
             // tableLayoutPanel3
             // 
@@ -466,8 +635,10 @@
             this.panelForPhoto.PerformLayout();
             this.panelForInfo.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
-            this.panelForMenu.ResumeLayout(false);
-            this.panelForMenu.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.toolStripMainMenu.ResumeLayout(false);
+            this.toolStripMainMenu.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -507,7 +678,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panelForPhoto;
         private System.Windows.Forms.Panel panelForInfo;
-        private System.Windows.Forms.Panel panelForMenu;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.TabControl tabControl;
@@ -515,7 +685,22 @@
         private System.Windows.Forms.TabPage tabCashBeznal;
         private System.Windows.Forms.TabPage tabCashTotal;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStrip toolStripMainMenu;
+        private System.Windows.Forms.ToolStripButton toolStrBtnMenuCashier;
+        private System.Windows.Forms.ToolStripButton toolStrBtnProdazhi;
+        private System.Windows.Forms.ToolStripButton toolStrBtnZakupki;
+        private System.Windows.Forms.ToolStripButton toolStrBtnSpisanie;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripButton toolStrBtnGroupProducts;
+        private System.Windows.Forms.ToolStripButton toolStrBtnProductsCatalog;
+        private System.Windows.Forms.ToolStripButton toolStrBtnManufacturer;
+        private System.Windows.Forms.ToolStripButton toolStrBtnClient;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStripButton toolStripButton13;
+        private System.Windows.Forms.ToolStripButton toolStripButton14;
     }
 }
 
