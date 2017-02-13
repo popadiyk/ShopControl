@@ -17,12 +17,14 @@ namespace ShopControlClient
         {
             InitializeComponent();
             formAddNewClient = new FormAddNewClient();
+            formAddChangeManufacturer = new FormAddChangeManufacturer();
             panel.Controls.Add(ucMenuCashier.Instance);
             ucMenuCashier.Instance.Dock = DockStyle.Fill;
             ucMenuCashier.Instance.BringToFront();
         }
         private ServiceClient loClient = new ServiceClient();
         FormAddNewClient formAddNewClient;
+        FormAddChangeManufacturer formAddChangeManufacturer;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -49,7 +51,9 @@ namespace ShopControlClient
                     formAddNewClient.ShowDialog();                   
                     break;
                 case "ucManufacturerCatalog":
-                    MessageBox.Show(myControl);
+                    formAddChangeManufacturer.Controls["btnApply"].Enabled = false;
+                    formAddChangeManufacturer.Controls["btnOK"].Enabled = true;
+                    formAddChangeManufacturer.ShowDialog();
                     break;
                 case "ucMenuCashier":
                     MessageBox.Show(myControl);
@@ -179,17 +183,18 @@ namespace ShopControlClient
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            
+            var control = (ISelected)panel.Controls[0];
+            int id = control.GetSelectedId();
             // перевіряємо, що в нас за ЮзерКонтрол в момент натискання батона
             switch (panel.Controls[0].Name)
             {
 
                 case "ucClientCatalog":
-                    var control = (ISelected)panel.Controls[0];
-                    int id = control.GetSelectedId();
+
                     ClientCatalog changedClient = loClient.FindClientById(id);
-                    if (id != -1) {
-                        // заповнюємо форму
+                    if (id != -1)
+                    {
+                        // заповнюємо форму 
                         formAddNewClient.Text = "Изменить текущего клиента";
                         formAddNewClient.Controls["btnApply"].Enabled = true;
                         formAddNewClient.Controls["btnOK"].Enabled = false;
@@ -211,7 +216,35 @@ namespace ShopControlClient
                     
                     break;
                 case "ucManufacturerCatalog":
-                    MessageBox.Show(panel.Controls[0].Name);
+                    ManufacturerCatalog changedManufacturer = loClient.FindManufacturerById(id);
+
+                    if (id != -1)
+                    {
+                        // заповнюємо форму
+                        formAddChangeManufacturer.Text = "Изменить текущего поставщика";
+                        formAddChangeManufacturer.Controls["btnApply"].Enabled = true;
+                        formAddChangeManufacturer.Controls["btnOK"].Enabled = false;
+                        formAddChangeManufacturer.Tag = id;
+                        CheckBox myCheckBox = new CheckBox();
+                        myCheckBox = (CheckBox)formAddChangeManufacturer.Controls["tabControl1"].Controls["tabPage1"].Controls["checkBox1"];
+
+                        formAddChangeManufacturer.Controls["txtBoxName"].Text = changedManufacturer.Name;
+                        formAddChangeManufacturer.Controls["tabControl1"].Controls["tabPage1"].Controls["txtBoxPhone"].Text = changedManufacturer.Phone;
+                        formAddChangeManufacturer.Controls["tabControl1"].Controls["tabPage1"].Controls["txtBoxEmail"].Text = changedManufacturer.Email;
+                        formAddChangeManufacturer.Controls["tabControl1"].Controls["tabPage1"].Controls["txtBoxWebsite"].Text = changedManufacturer.WebSite;
+                        formAddChangeManufacturer.Controls["tabControl1"].Controls["tabPage1"].Controls["txtBoxTotalSum"].Text = changedManufacturer.SumDebt.ToString();
+                        myCheckBox.Checked = changedManufacturer.IsRealization;
+                        formAddChangeManufacturer.Controls["tabControl1"].Controls["tabPage2"].Controls["txtBoxINN"].Text = changedManufacturer.INN;
+                        formAddChangeManufacturer.Controls["tabControl1"].Controls["tabPage2"].Controls["txtBoxEDERPOU"].Text = changedManufacturer.EDERPOU;
+                        formAddChangeManufacturer.Controls["tabControl1"].Controls["tabPage2"].Controls["txtBoxMFO"].Text = changedManufacturer.MFO;
+                        formAddChangeManufacturer.Controls["tabControl1"].Controls["tabPage2"].Controls["txtBoxRR"].Text = changedManufacturer.RR;
+                        formAddChangeManufacturer.Controls["tabControl1"].Controls["tabPage2"].Controls["txtBoxBank"].Text = changedManufacturer.Bank;
+                        formAddChangeManufacturer.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Не выбран елемент!");
+                    }
                     break;
                 case "ucMenuCashier":
                     MessageBox.Show(panel.Controls[0].Name);
@@ -238,11 +271,12 @@ namespace ShopControlClient
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            var control = (ISelected)panel.Controls[0];
+            int id = control.GetSelectedId();
+
             switch (panel.Controls[0].Name)
             {
                 case "ucClientCatalog":
-                    var control = (ISelected)panel.Controls[0];
-                    int id = control.GetSelectedId();
                     if (id != -1)
                     {
                         if (MessageBox.Show("Вы уверены?", "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) == DialogResult.OK)
@@ -257,7 +291,18 @@ namespace ShopControlClient
 
                     break;
                 case "ucManufacturerCatalog":
-                    MessageBox.Show(panel.Controls[0].Name);
+                    if (id != -1)
+                    {
+                        if (MessageBox.Show("Вы уверены?", "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) == DialogResult.OK)
+                        {
+                            loClient.DeleteManufacturer(id);
+                            ucManufacturerCatalog.Instance.ReloadList();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Не выбран елемент!");
+                    }
                     break;
                 case "ucMenuCashier":
                     MessageBox.Show(panel.Controls[0].Name);

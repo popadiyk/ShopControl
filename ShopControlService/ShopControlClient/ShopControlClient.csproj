@@ -54,6 +54,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddChangeManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChangeManufacturer.Designer.cs">
+      <DependentUpon>FormAddChangeManufacturer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddNewClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChangeManufacturer.resx">
+      <DependentUpon>FormAddChangeManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddNewClient.resx">
       <DependentUpon>FormAddNewClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +185,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReference1\ShopControlClient.ServiceReference1.ClientCatalog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\ShopControlClient.ServiceReference1.ManufacturerCatalog.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>

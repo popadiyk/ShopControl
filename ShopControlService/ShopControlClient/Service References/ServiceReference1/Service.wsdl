@@ -37,6 +37,36 @@
   <wsdl:message name="IService_DeleteClient_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteClientResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_ManufacturerCatalogList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManufacturerCatalogList" />
+  </wsdl:message>
+  <wsdl:message name="IService_ManufacturerCatalogList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManufacturerCatalogListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddNewManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddNewManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteManufacturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteManufacturer" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteManufacturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteManufacturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_FindManufacturerById_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindManufacturerById" />
+  </wsdl:message>
+  <wsdl:message name="IService_FindManufacturerById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindManufacturerByIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="AddNewClient">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/AddNewClient" message="tns:IService_AddNewClient_InputMessage" />
@@ -57,6 +87,26 @@
     <wsdl:operation name="DeleteClient">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteClient" message="tns:IService_DeleteClient_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteClientResponse" message="tns:IService_DeleteClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManufacturerCatalogList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ManufacturerCatalogList" message="tns:IService_ManufacturerCatalogList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ManufacturerCatalogListResponse" message="tns:IService_ManufacturerCatalogList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddNewManufacturer" message="tns:IService_AddNewManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddNewManufacturerResponse" message="tns:IService_AddNewManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateManufacturer" message="tns:IService_UpdateManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateManufacturerResponse" message="tns:IService_UpdateManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteManufacturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteManufacturer" message="tns:IService_DeleteManufacturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteManufacturerResponse" message="tns:IService_DeleteManufacturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindManufacturerById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/FindManufacturerById" message="tns:IService_FindManufacturerById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/FindManufacturerByIdResponse" message="tns:IService_FindManufacturerById_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -99,6 +149,51 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteClient">
       <soap:operation soapAction="http://tempuri.org/IService/DeleteClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManufacturerCatalogList">
+      <soap:operation soapAction="http://tempuri.org/IService/ManufacturerCatalogList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IService/AddNewManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteManufacturer">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteManufacturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindManufacturerById">
+      <soap:operation soapAction="http://tempuri.org/IService/FindManufacturerById" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

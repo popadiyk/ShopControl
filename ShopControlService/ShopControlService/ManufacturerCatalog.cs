@@ -19,10 +19,14 @@ namespace ShopControlService
         [MaxLength(100)]
         public string WebSite { get; set; }
         public bool IsRealization { get; set; }
-        public int INN { get; set; }
-        public int EDERPOU { get; set; }
-        public int MFO { get; set; }
-        public int RR { get; set; }
+        [MaxLength(8)]
+        public string INN { get; set; }
+        [MaxLength(8)]
+        public string EDERPOU { get; set; }
+        [MaxLength(6)]
+        public string MFO { get; set; }
+        [MaxLength(16)]
+        public string RR { get; set; }
         public string Bank { get; set; }
         public float SumDebt { get; set; }
 

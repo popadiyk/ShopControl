@@ -29,4 +29,30 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EntityId" nillable="true" type="tns:EntityId" />
+  <xs:complexType name="ArrayOfManufacturerCatalog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ManufacturerCatalog" nillable="true" type="tns:ManufacturerCatalog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfManufacturerCatalog" nillable="true" type="tns:ArrayOfManufacturerCatalog" />
+  <xs:complexType name="ManufacturerCatalog">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bank" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EDERPOU" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsRealization" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MFO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SumDebt" type="xs:float" />
+          <xs:element minOccurs="0" name="WebSite" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ManufacturerCatalog" nillable="true" type="tns:ManufacturerCatalog" />
 </xs:schema>

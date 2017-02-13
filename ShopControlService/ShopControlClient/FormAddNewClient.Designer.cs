@@ -239,7 +239,9 @@
             this.Controls.Add(this.txtBoxName);
             this.Controls.Add(this.label2AddClient);
             this.Controls.Add(this.label1AddClient);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormAddNewClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление нового клиента";

@@ -15,3 +15,4 @@ C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlS
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.csproj.GenerateResource.Cache
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.exe
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.pdb
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.FormAddChangeManufacturer.resources
