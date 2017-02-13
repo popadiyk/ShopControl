@@ -425,16 +425,16 @@ namespace ShopControlClient.ServiceReference1 {
         System.Threading.Tasks.Task AddNewManufacturerAsync(string NameMan, string PhoneMan, string EmailMan, string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan, string RRMan, string BankMan);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateManufacturer", ReplyAction="http://tempuri.org/IService/UpdateManufacturerResponse")]
-        void UpdateManufacturer();
+        void UpdateManufacturer(int _id, string NameMan, string PhoneMan, string EmailMan, string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan, string RRMan, string BankMan);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateManufacturer", ReplyAction="http://tempuri.org/IService/UpdateManufacturerResponse")]
-        System.Threading.Tasks.Task UpdateManufacturerAsync();
+        System.Threading.Tasks.Task UpdateManufacturerAsync(int _id, string NameMan, string PhoneMan, string EmailMan, string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan, string RRMan, string BankMan);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteManufacturer", ReplyAction="http://tempuri.org/IService/DeleteManufacturerResponse")]
-        void DeleteManufacturer();
+        void DeleteManufacturer(int _id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteManufacturer", ReplyAction="http://tempuri.org/IService/DeleteManufacturerResponse")]
-        System.Threading.Tasks.Task DeleteManufacturerAsync();
+        System.Threading.Tasks.Task DeleteManufacturerAsync(int _id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/FindManufacturerById", ReplyAction="http://tempuri.org/IService/FindManufacturerByIdResponse")]
         ShopControlClient.ServiceReference1.ManufacturerCatalog FindManufacturerById(int _id);
@@ -526,20 +526,20 @@ namespace ShopControlClient.ServiceReference1 {
             return base.Channel.AddNewManufacturerAsync(NameMan, PhoneMan, EmailMan, WebsiteMan, IsRealizMan, INNMan, EDRPOUMan, MFOMan, RRMan, BankMan);
         }
         
-        public void UpdateManufacturer() {
-            base.Channel.UpdateManufacturer();
+        public void UpdateManufacturer(int _id, string NameMan, string PhoneMan, string EmailMan, string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan, string RRMan, string BankMan) {
+            base.Channel.UpdateManufacturer(_id, NameMan, PhoneMan, EmailMan, WebsiteMan, IsRealizMan, INNMan, EDRPOUMan, MFOMan, RRMan, BankMan);
         }
         
-        public System.Threading.Tasks.Task UpdateManufacturerAsync() {
-            return base.Channel.UpdateManufacturerAsync();
+        public System.Threading.Tasks.Task UpdateManufacturerAsync(int _id, string NameMan, string PhoneMan, string EmailMan, string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan, string RRMan, string BankMan) {
+            return base.Channel.UpdateManufacturerAsync(_id, NameMan, PhoneMan, EmailMan, WebsiteMan, IsRealizMan, INNMan, EDRPOUMan, MFOMan, RRMan, BankMan);
         }
         
-        public void DeleteManufacturer() {
-            base.Channel.DeleteManufacturer();
+        public void DeleteManufacturer(int _id) {
+            base.Channel.DeleteManufacturer(_id);
         }
         
-        public System.Threading.Tasks.Task DeleteManufacturerAsync() {
-            return base.Channel.DeleteManufacturerAsync();
+        public System.Threading.Tasks.Task DeleteManufacturerAsync(int _id) {
+            return base.Channel.DeleteManufacturerAsync(_id);
         }
         
         public ShopControlClient.ServiceReference1.ManufacturerCatalog FindManufacturerById(int _id) {

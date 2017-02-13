@@ -28,32 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.listViewManufacturerCatalog = new System.Windows.Forms.ListView();
+            this.IdClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NameClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PhoneNumberClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SumDebt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // label1
+            // listViewManufacturerCatalog
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Каталог производителей";
+            this.listViewManufacturerCatalog.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.IdClient,
+            this.NameClient,
+            this.PhoneNumberClient,
+            this.SumDebt});
+            this.listViewManufacturerCatalog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewManufacturerCatalog.FullRowSelect = true;
+            this.listViewManufacturerCatalog.GridLines = true;
+            this.listViewManufacturerCatalog.Location = new System.Drawing.Point(0, 0);
+            this.listViewManufacturerCatalog.Name = "listViewManufacturerCatalog";
+            this.listViewManufacturerCatalog.Size = new System.Drawing.Size(647, 449);
+            this.listViewManufacturerCatalog.TabIndex = 1;
+            this.listViewManufacturerCatalog.UseCompatibleStateImageBehavior = false;
+            this.listViewManufacturerCatalog.View = System.Windows.Forms.View.Details;
+            this.listViewManufacturerCatalog.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listViewManufacturerCatalog_ColumnWidthChanging);
+            // 
+            // IdClient
+            // 
+            this.IdClient.Text = "ID";
+            this.IdClient.Width = 0;
+            // 
+            // NameClient
+            // 
+            this.NameClient.Text = "Имя";
+            this.NameClient.Width = 304;
+            // 
+            // PhoneNumberClient
+            // 
+            this.PhoneNumberClient.Text = "Телефон";
+            this.PhoneNumberClient.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PhoneNumberClient.Width = 120;
+            // 
+            // SumDebt
+            // 
+            this.SumDebt.Text = "Сумма дебета";
+            this.SumDebt.Width = 120;
             // 
             // ucManufacturerCatalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listViewManufacturerCatalog);
             this.Name = "ucManufacturerCatalog";
             this.Size = new System.Drawing.Size(647, 449);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView listViewManufacturerCatalog;
+        private System.Windows.Forms.ColumnHeader IdClient;
+        private System.Windows.Forms.ColumnHeader NameClient;
+        private System.Windows.Forms.ColumnHeader PhoneNumberClient;
+        private System.Windows.Forms.ColumnHeader SumDebt;
     }
 }

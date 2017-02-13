@@ -109,7 +109,19 @@
   </xs:element>
   <xs:element name="UpdateManufacturer">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" type="xs:int" />
+        <xs:element minOccurs="0" name="NameMan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhoneMan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EmailMan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WebsiteMan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsRealizMan" type="xs:boolean" />
+        <xs:element minOccurs="0" name="INNMan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EDRPOUMan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MFOMan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RRMan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BankMan" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateManufacturerResponse">
@@ -119,7 +131,9 @@
   </xs:element>
   <xs:element name="DeleteManufacturer">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="DeleteManufacturerResponse">

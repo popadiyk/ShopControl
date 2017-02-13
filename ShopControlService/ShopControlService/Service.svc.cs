@@ -25,18 +25,26 @@ namespace ShopControlService
         {
             using (DataContext db = new DataContext())
             {
-                ClientCatalog newClient = new ClientCatalog
+                try
                 {
-                    CreateDate = DateTime.Now,
-                    Name = NameCl,
-                    Descripton = DescriptionCl,
-                    Discount = DiscountCl,
-                    CardNumber = CardNumberCl,
-                    PhoneNumber = PhoneNumberCl,
-                    BirthDate = BirthDateCl
-                };                 
-                db.TClientCatalog.Add(newClient);
-                db.SaveChanges();
+                    ClientCatalog newClient = new ClientCatalog
+                    {
+                        CreateDate = DateTime.Now,
+                        Name = NameCl,
+                        Descripton = DescriptionCl,
+                        Discount = DiscountCl,
+                        CardNumber = CardNumberCl,
+                        PhoneNumber = PhoneNumberCl,
+                        BirthDate = BirthDateCl
+                    };
+                    db.TClientCatalog.Add(newClient);
+                    db.SaveChanges();
+                } 
+                catch
+                {
+
+                }
+
             }
         }
 
@@ -44,16 +52,24 @@ namespace ShopControlService
         {
             using (DataContext db = new DataContext())
             {
-                ClientCatalog changedClient = db.TClientCatalog
-                    .Where(c => c.ID == IdCl)
-                    .FirstOrDefault();
-                changedClient.Name = NameCl;
-                changedClient.Descripton = DescriptionCl;
-                changedClient.Discount = DiscountCl;
-                changedClient.CardNumber = CardNumberCl;
-                changedClient.PhoneNumber = PhoneNumberCl;
-                changedClient.BirthDate = BirthDateCl;
-                db.SaveChanges();
+                try
+                {
+                    ClientCatalog changedClient = db.TClientCatalog
+                        .Where(c => c.ID == IdCl)
+                        .FirstOrDefault();
+                    changedClient.Name = NameCl;
+                    changedClient.Descripton = DescriptionCl;
+                    changedClient.Discount = DiscountCl;
+                    changedClient.CardNumber = CardNumberCl;
+                    changedClient.PhoneNumber = PhoneNumberCl;
+                    changedClient.BirthDate = BirthDateCl;
+                    db.SaveChanges();
+                } 
+                catch
+                {
+
+                }
+
             }
         }
 
@@ -98,34 +114,62 @@ namespace ShopControlService
         {
             using (DataContext db = new DataContext())
             {
-                ManufacturerCatalog newManufacturer = new ManufacturerCatalog
+                try
                 {
-                    Name = NameMan,
-                    Phone = PhoneMan,
-                    Email = EmailMan,
-                    WebSite = WebsiteMan,
-                    IsRealization = IsRealizMan,
-                    INN = INNMan,
-                    EDERPOU = EDRPOUMan,
-                    MFO = MFOMan,
-                    RR = RRMan,
-                    Bank = BankMan
-                };
-                db.TManufacturerCatalog.Add(newManufacturer);
-                db.SaveChanges();
+                    ManufacturerCatalog newManufacturer = new ManufacturerCatalog
+                    {
+                        Name = NameMan,
+                        Phone = PhoneMan,
+                        Email = EmailMan,
+                        WebSite = WebsiteMan,
+                        IsRealization = IsRealizMan,
+                        INN = INNMan,
+                        EDERPOU = EDRPOUMan,
+                        MFO = MFOMan,
+                        RR = RRMan,
+                        Bank = BankMan
+                    };
+                    db.TManufacturerCatalog.Add(newManufacturer);
+                    db.SaveChanges();
+                } 
+                catch
+                {
+
+                }
+
             }
         }
 
-        void IService.UpdateManufacturer()
+        void IService.UpdateManufacturer(int _id, string NameMan, string PhoneMan, string EmailMan,
+            string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan,
+            string RRMan, string BankMan)
         {
-            throw new NotImplementedException();
-        }
+            using (DataContext db = new DataContext())
+            {
+                try
+                {
+                    ManufacturerCatalog changedManufacturer = db.TManufacturerCatalog
+                    .Where(c => c.ID == _id)
+                    .FirstOrDefault();
+                    changedManufacturer.Name = NameMan;
+                    changedManufacturer.Phone = PhoneMan;
+                    changedManufacturer.Email = EmailMan;
+                    changedManufacturer.WebSite = WebsiteMan;
+                    changedManufacturer.IsRealization = IsRealizMan;
+                    changedManufacturer.INN = INNMan;
+                    changedManufacturer.EDERPOU = EDRPOUMan;
+                    changedManufacturer.MFO = MFOMan;
+                    changedManufacturer.RR = RRMan;
+                    changedManufacturer.Bank = BankMan;
+                    db.SaveChanges();
+                } 
+                catch
+                {
+                    
+                }
 
-        void IService.DeleteManufacturer()
-        {
-            throw new NotImplementedException();
+            }
         }
-
         ManufacturerCatalog IService.FindManufacturerById(int _id)
         {
             using (DataContext db = new DataContext())
@@ -136,6 +180,18 @@ namespace ShopControlService
                 return findManufacturer;
             }
         }
+        void IService.DeleteManufacturer(int _id)
+        {
+            using (DataContext db = new DataContext())
+            {
+                ManufacturerCatalog findManufacturer = db.TManufacturerCatalog
+                    .Where(c => c.ID == _id)
+                    .FirstOrDefault();
+                db.TManufacturerCatalog.Remove(findManufacturer);
+                db.SaveChanges();
+            }
+        }
+
 
         // -----КІНЕЦЬ--------------- ВИРОБНИКИ КАТАЛОГ ----------------------- //
 

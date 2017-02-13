@@ -33,9 +33,11 @@ namespace ShopControlService
             string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan,
             string RRMan, string BankMan);
         [OperationContract]
-        void UpdateManufacturer();
+        void UpdateManufacturer(int _id, string NameMan, string PhoneMan, string EmailMan,
+            string WebsiteMan, bool IsRealizMan, string INNMan, string EDRPOUMan, string MFOMan,
+            string RRMan, string BankMan);
         [OperationContract]
-        void DeleteManufacturer();
+        void DeleteManufacturer(int _id);
         [OperationContract]
         ManufacturerCatalog FindManufacturerById(int _id); 
 
