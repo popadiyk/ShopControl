@@ -155,4 +155,41 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddNewGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NameGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idParent" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewGroupResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductGroupList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductGroupListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ShopControlService" minOccurs="0" name="ProductGroupListResult" nillable="true" type="q5:ArrayOfProductGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteGroupResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

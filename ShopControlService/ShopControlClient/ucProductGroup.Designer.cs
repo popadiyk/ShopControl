@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.treeViewProductGroup = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
-            // label1
+            // treeViewProductGroup
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Группы товаров";
+            this.treeViewProductGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewProductGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeViewProductGroup.Location = new System.Drawing.Point(0, 0);
+            this.treeViewProductGroup.Name = "treeViewProductGroup";
+            this.treeViewProductGroup.Size = new System.Drawing.Size(589, 417);
+            this.treeViewProductGroup.TabIndex = 0;
+            this.treeViewProductGroup.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeViewProductGroup_MouseClick);
             // 
             // ucProductGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.treeViewProductGroup);
             this.Name = "ucProductGroup";
             this.Size = new System.Drawing.Size(589, 417);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TreeView treeViewProductGroup;
     }
 }

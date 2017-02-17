@@ -67,6 +67,24 @@
   <wsdl:message name="IService_FindManufacturerById_OutputMessage">
     <wsdl:part name="parameters" element="tns:FindManufacturerByIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_AddNewGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddNewGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ProductGroupList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IService_ProductGroupList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGroupResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="AddNewClient">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/AddNewClient" message="tns:IService_AddNewClient_InputMessage" />
@@ -107,6 +125,18 @@
     <wsdl:operation name="FindManufacturerById">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/FindManufacturerById" message="tns:IService_FindManufacturerById_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/FindManufacturerByIdResponse" message="tns:IService_FindManufacturerById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddNewGroup" message="tns:IService_AddNewGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddNewGroupResponse" message="tns:IService_AddNewGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductGroupList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ProductGroupList" message="tns:IService_ProductGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ProductGroupListResponse" message="tns:IService_ProductGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteGroup" message="tns:IService_DeleteGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteGroupResponse" message="tns:IService_DeleteGroup_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -194,6 +224,33 @@
     </wsdl:operation>
     <wsdl:operation name="FindManufacturerById">
       <soap:operation soapAction="http://tempuri.org/IService/FindManufacturerById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewGroup">
+      <soap:operation soapAction="http://tempuri.org/IService/AddNewGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductGroupList">
+      <soap:operation soapAction="http://tempuri.org/IService/ProductGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteGroup" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

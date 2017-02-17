@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ShopControlClient.ServiceReference1;
+using System.Windows.Forms;
 
 namespace ShopControlClient
 {
-    interface ISelected
+    public class Helper
     {
-        int GetSelectedId();
+        
     }
 }

@@ -10,7 +10,9 @@ namespace ShopControlService
     {
         public DataContext()
             : base("DbConnection")
-        { }
+        {
+            this.Configuration.ProxyCreationEnabled = false;
+        }
 
         public DbSet<ProductsCatalog> TProductsCatalog { get; set; }
         public DbSet<ProductGroup> TProductGroup { get; set;}

@@ -195,5 +195,71 @@ namespace ShopControlService
 
         // -----КІНЕЦЬ--------------- ВИРОБНИКИ КАТАЛОГ ----------------------- //
 
+        // -------------------- ГРУПИ ТОВАРІВ КАТАЛОГ ----------------------- //
+
+        void IService.AddNewGroup(string NameGroup, int idParent)
+        {
+            using (DataContext db = new DataContext())
+            {
+                try
+                {
+                    ProductGroup newGroup = new ProductGroup();
+                    newGroup.Name = NameGroup;
+                    if (idParent == 0)
+                    {
+                        newGroup.Parent = null;
+                    }
+                    else
+                    {
+                        ProductGroup ParentNewGroup = db.TProductGroup.
+                            Where(x => x.ID == idParent)
+                            .FirstOrDefault();
+                        newGroup.Parent = ParentNewGroup;
+                    }
+                    db.TProductGroup.Add(newGroup);
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    
+                }
+
+
+            }
+        }
+
+
+
+        public List<ProductGroup> ProductGroupList()
+        {
+            using (DataContext db = new DataContext())
+            {
+                return db.TProductGroup.ToList();
+            }
+        }
+
+        public void DeleteGroup(int _id)
+        {
+            using (DataContext db = new DataContext())
+            {
+                ProductGroup removeGroup = new ProductGroup();
+                if (_id == 0)
+                {
+                    removeGroup = null;
+                }
+                else
+                {
+                    removeGroup = db.TProductGroup.
+                        Where(x => x.ID == _id)
+                        .FirstOrDefault();
+                }
+                db.TProductGroup.Remove(removeGroup);
+                db.SaveChanges();
+            }
+
+        }
+
+        // ------КІНЕЦЬ-------------- ГРУПИ ТОВАРІВ КАТАЛОГ ----------------------- //
+
     }
-    }
+}

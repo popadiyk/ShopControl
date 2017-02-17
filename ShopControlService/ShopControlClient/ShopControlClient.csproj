@@ -54,6 +54,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddChangeGroupProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChangeGroupProduct.Designer.cs">
+      <DependentUpon>FormAddChangeGroupProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddChangeManufacturer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,7 @@
     <Compile Include="FormAddNewClient.Designer.cs">
       <DependentUpon>FormAddNewClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="ISelected.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -124,6 +131,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChangeGroupProduct.resx">
+      <DependentUpon>FormAddChangeGroupProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddChangeManufacturer.resx">
       <DependentUpon>FormAddChangeManufacturer.cs</DependentUpon>
@@ -188,6 +198,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\ShopControlClient.ServiceReference1.ManufacturerCatalog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\ShopControlClient.ServiceReference1.ProductGroup.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>

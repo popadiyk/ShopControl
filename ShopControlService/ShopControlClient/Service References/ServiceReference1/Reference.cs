@@ -153,6 +153,7 @@ namespace ShopControlClient.ServiceReference1 {
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityId", Namespace="http://schemas.datacontract.org/2004/07/ShopControlService")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ShopControlClient.ServiceReference1.ManufacturerCatalog))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ShopControlClient.ServiceReference1.ProductGroup))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ShopControlClient.ServiceReference1.ClientCatalog))]
     public partial class EntityId : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -378,6 +379,45 @@ namespace ShopControlClient.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProductGroup", Namespace="http://schemas.datacontract.org/2004/07/ShopControlService")]
+    [System.SerializableAttribute()]
+    public partial class ProductGroup : ShopControlClient.ServiceReference1.EntityId {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ShopControlClient.ServiceReference1.ProductGroup ParentField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ShopControlClient.ServiceReference1.ProductGroup Parent {
+            get {
+                return this.ParentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ParentField, value) != true)) {
+                    this.ParentField = value;
+                    this.RaisePropertyChanged("Parent");
+                }
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService")]
     public interface IService {
@@ -441,6 +481,24 @@ namespace ShopControlClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/FindManufacturerById", ReplyAction="http://tempuri.org/IService/FindManufacturerByIdResponse")]
         System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ManufacturerCatalog> FindManufacturerByIdAsync(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddNewGroup", ReplyAction="http://tempuri.org/IService/AddNewGroupResponse")]
+        void AddNewGroup(string NameGroup, int idParent);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddNewGroup", ReplyAction="http://tempuri.org/IService/AddNewGroupResponse")]
+        System.Threading.Tasks.Task AddNewGroupAsync(string NameGroup, int idParent);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ProductGroupList", ReplyAction="http://tempuri.org/IService/ProductGroupListResponse")]
+        ShopControlClient.ServiceReference1.ProductGroup[] ProductGroupList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ProductGroupList", ReplyAction="http://tempuri.org/IService/ProductGroupListResponse")]
+        System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ProductGroup[]> ProductGroupListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGroup", ReplyAction="http://tempuri.org/IService/DeleteGroupResponse")]
+        void DeleteGroup(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGroup", ReplyAction="http://tempuri.org/IService/DeleteGroupResponse")]
+        System.Threading.Tasks.Task DeleteGroupAsync(int _id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -548,6 +606,30 @@ namespace ShopControlClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ManufacturerCatalog> FindManufacturerByIdAsync(int _id) {
             return base.Channel.FindManufacturerByIdAsync(_id);
+        }
+        
+        public void AddNewGroup(string NameGroup, int idParent) {
+            base.Channel.AddNewGroup(NameGroup, idParent);
+        }
+        
+        public System.Threading.Tasks.Task AddNewGroupAsync(string NameGroup, int idParent) {
+            return base.Channel.AddNewGroupAsync(NameGroup, idParent);
+        }
+        
+        public ShopControlClient.ServiceReference1.ProductGroup[] ProductGroupList() {
+            return base.Channel.ProductGroupList();
+        }
+        
+        public System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ProductGroup[]> ProductGroupListAsync() {
+            return base.Channel.ProductGroupListAsync();
+        }
+        
+        public void DeleteGroup(int _id) {
+            base.Channel.DeleteGroup(_id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteGroupAsync(int _id) {
+            return base.Channel.DeleteGroupAsync(_id);
         }
     }
 }

@@ -48,8 +48,10 @@ C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlS
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.csprojResolveAssemblyReference.cache
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.CreateDB.resources
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.ChangeClientCatalog.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.updateManufacturerCatalog.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.second_change_manufactCatalog.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.ChangeProductGroup.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.ChangedProductGroup2.resources
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.csproj.GenerateResource.Cache
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.dll
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.pdb
-C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.updateManufacturerCatalog.resources
-C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlService\obj\Debug\ShopControlService.Migrations.second_change_manufactCatalog.resources

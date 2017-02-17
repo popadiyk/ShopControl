@@ -127,6 +127,14 @@
     <Compile Include="Migrations\201702131049422_second_change_manufactCatalog.Designer.cs">
       <DependentUpon>201702131049422_second_change_manufactCatalog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702141351163_ChangeProductGroup.cs" />
+    <Compile Include="Migrations\201702141351163_ChangeProductGroup.Designer.cs">
+      <DependentUpon>201702141351163_ChangeProductGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702151016531_ChangedProductGroup2.cs" />
+    <Compile Include="Migrations\201702151016531_ChangedProductGroup2.Designer.cs">
+      <DependentUpon>201702151016531_ChangedProductGroup2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductGroup.cs" />
     <Compile Include="ProductsCatalog.cs" />
@@ -168,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702131049422_second_change_manufactCatalog.resx">
       <DependentUpon>201702131049422_second_change_manufactCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702141351163_ChangeProductGroup.resx">
+      <DependentUpon>201702141351163_ChangeProductGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702151016531_ChangedProductGroup2.resx">
+      <DependentUpon>201702151016531_ChangedProductGroup2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

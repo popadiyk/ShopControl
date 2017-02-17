@@ -11,7 +11,6 @@ namespace ShopControlService
     {
         [MaxLength(100)]
         public string Name { get; set; }
-        [Required]
-        public int GroupPush { get; set; }
+        public virtual ProductGroup Parent { get; set; }
     }
 }

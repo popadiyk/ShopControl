@@ -39,10 +39,23 @@ namespace ShopControlService
         [OperationContract]
         void DeleteManufacturer(int _id);
         [OperationContract]
-        ManufacturerCatalog FindManufacturerById(int _id); 
+        ManufacturerCatalog FindManufacturerById(int _id);
 
 
         // ----КІНЕЦЬ---------------- ВИРОБНИКИ КАТАЛОГ ----------------------- //
+        
+        // -------------------- ГРУПИ ТОВАРІВ КАТАЛОГ ----------------------- //
+
+        [OperationContract]
+        void AddNewGroup(string NameGroup, int idParent);
+        [OperationContract]
+        List<ProductGroup> ProductGroupList();
+        [OperationContract]
+        void DeleteGroup(int _id);
+
+
+        // ----КІНЕЦЬ---------------- ГРУПИ ТОВАРІВ КАТАЛОГ ----------------------- //
+
 
     }
 }

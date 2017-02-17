@@ -2,6 +2,8 @@ C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlS
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\bin\Debug\ShopControlClient.exe
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\bin\Debug\ShopControlClient.pdb
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.MainForm.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.FormAddChangeGroupProduct.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.FormAddChangeManufacturer.resources
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.FormAddNewClient.resources
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.Properties.Resources.resources
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.ucClientCatalog.resources
@@ -15,5 +17,4 @@ C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlS
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.csproj.GenerateResource.Cache
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.exe
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.pdb
-C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.FormAddChangeManufacturer.resources
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.csprojResolveAssemblyReference.cache

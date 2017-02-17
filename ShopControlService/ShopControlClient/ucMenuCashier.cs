@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShopControlClient.ServiceReference1;
 
 namespace ShopControlClient
 {
     public partial class ucMenuCashier : UserControl
     {
+        private readonly ServiceClient loClient = new ServiceClient();
         private static ucMenuCashier _instance;
         public static ucMenuCashier Instance
         {
@@ -26,6 +28,9 @@ namespace ShopControlClient
         public ucMenuCashier()
         {
             InitializeComponent();
+            treeView1.Nodes.AddRange(ucProductGroup.Instance.DrawTree(loClient.ProductGroupList().ToList()));
         }
+
+
     }
 }

@@ -18,6 +18,7 @@ namespace ShopControlClient
             InitializeComponent();
             formAddNewClient = new FormAddNewClient();
             formAddChangeManufacturer = new FormAddChangeManufacturer();
+            formAddChangeGroupProduct = new FormAddChangeGroupProduct();
             panel.Controls.Add(ucMenuCashier.Instance);
             ucMenuCashier.Instance.Dock = DockStyle.Fill;
             ucMenuCashier.Instance.BringToFront();
@@ -25,10 +26,10 @@ namespace ShopControlClient
         private ServiceClient loClient = new ServiceClient();
         FormAddNewClient formAddNewClient;
         FormAddChangeManufacturer formAddChangeManufacturer;
+        FormAddChangeGroupProduct formAddChangeGroupProduct;
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -59,7 +60,9 @@ namespace ShopControlClient
                     MessageBox.Show(myControl);
                     break;
                 case "ucProductGroup":
-                    MessageBox.Show(myControl);
+                    formAddChangeGroupProduct.Controls["btnApply"].Enabled = false;
+                    formAddChangeGroupProduct.Controls["btnOK"].Enabled = true;
+                    formAddChangeGroupProduct.ShowDialog();
                     break;
                 case "ucProductsCatalog":
                     MessageBox.Show(myControl);
@@ -259,7 +262,7 @@ namespace ShopControlClient
                     MessageBox.Show(panel.Controls[0].Name);
                     break;
                 case "ucProductGroup":
-                    MessageBox.Show(panel.Controls[0].Name);
+                    MessageBox.Show(id.ToString());
                     break;
                 case "ucProductsCatalog":
                     MessageBox.Show(panel.Controls[0].Name);
