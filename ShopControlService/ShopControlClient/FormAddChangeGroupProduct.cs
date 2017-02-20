@@ -14,7 +14,7 @@ namespace ShopControlClient
     public partial class FormAddChangeGroupProduct : Form
     {
         private ServiceClient loClient = new ServiceClient();
-        private ProductGroup SelectedGroup = new ProductGroup();
+        public ProductGroup SelectedGroup = new ProductGroup();
         public FormAddChangeGroupProduct()
         {
             InitializeComponent();
@@ -28,10 +28,10 @@ namespace ShopControlClient
                         SelectedGroup = i;
                         txtBoxParentGroup.Text = SelectedGroup.Name;
                         return SelectedGroup.ID;
+                    }
                 }
-                }
-            return 0;
-            
+            SelectedGroup.ID = 0;
+            return SelectedGroup.ID;         
         }
 
         private void ClearForm()
@@ -50,7 +50,7 @@ namespace ShopControlClient
                 );
                 SelectedGroup = new ProductGroup();
                 ClearForm();
-                Close();
+                this.Close();
                 ucProductGroup.Instance.LoadTree();
             }
             catch (Exception ex)
@@ -69,6 +69,46 @@ namespace ShopControlClient
         private void treeView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             GetGroup();
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+        try
+            {
+                loClient.UpdateGroup(
+                    Convert.ToInt32(Tag.ToString()),
+                    txtBoxName.Text,
+                    SelectedGroup.ID
+                );
+                SelectedGroup = null;
+                ClearForm();
+                this.Close();
+                ucProductGroup.Instance.LoadTree();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            SelectedGroup = null;
+            ClearForm();
+            this.Close();
+        }
+
+        private void FormAddChangeGroupProduct_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            SelectedGroup = null;
+            ClearForm();
+            this.Close();
+        }
+
+        private void GroupNull_Click(object sender, EventArgs e)
+        {
+            SelectedGroup.ID = 0;
+            txtBoxParentGroup.Text = "";
         }
     }
 }

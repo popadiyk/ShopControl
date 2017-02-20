@@ -47,11 +47,13 @@ namespace ShopControlClient
             switch (myControl)
             {
                 case "ucClientCatalog":
+                    formAddNewClient.Text = "Добавление нового клиента";
                     formAddNewClient.Controls["btnApply"].Enabled = false;
                     formAddNewClient.Controls["btnOK"].Enabled = true;
                     formAddNewClient.ShowDialog();                   
                     break;
                 case "ucManufacturerCatalog":
+                    formAddChangeManufacturer.Text = "Добавление нового производителя";
                     formAddChangeManufacturer.Controls["btnApply"].Enabled = false;
                     formAddChangeManufacturer.Controls["btnOK"].Enabled = true;
                     formAddChangeManufacturer.ShowDialog();
@@ -60,6 +62,7 @@ namespace ShopControlClient
                     MessageBox.Show(myControl);
                     break;
                 case "ucProductGroup":
+                    formAddChangeGroupProduct.Text = "Добавление новой группы товаров";
                     formAddChangeGroupProduct.Controls["btnApply"].Enabled = false;
                     formAddChangeGroupProduct.Controls["btnOK"].Enabled = true;
                     formAddChangeGroupProduct.ShowDialog();
@@ -135,12 +138,17 @@ namespace ShopControlClient
         {
             if (!panel.Controls.Contains(ucMenuCashier.Instance))
             {
+
                 panel.Controls.Add(ucMenuCashier.Instance);
+                ucMenuCashier.Instance.ReloadTree();
                 ucMenuCashier.Instance.Dock = DockStyle.Fill;
                 ucMenuCashier.Instance.BringToFront();
             }
             else
+            {
+                ucMenuCashier.Instance.ReloadTree();
                 ucMenuCashier.Instance.BringToFront();
+            }
         }
 
         private void prodazhiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -262,7 +270,24 @@ namespace ShopControlClient
                     MessageBox.Show(panel.Controls[0].Name);
                     break;
                 case "ucProductGroup":
-                    MessageBox.Show(id.ToString());
+                    formAddChangeGroupProduct.Text = "Изменить текущую группу товаров";
+                    formAddChangeGroupProduct.Controls["btnApply"].Enabled = true;
+                    formAddChangeGroupProduct.Controls["btnOK"].Enabled = false;
+                    formAddChangeGroupProduct.Tag = id;
+
+                    ProductGroup ChangedGroup = loClient.ProductGroupList().Where(i => i.ID == id)
+                        .FirstOrDefault();
+                    try
+                    {
+                        formAddChangeGroupProduct.Controls["txtBoxParentGroup"].Text = ChangedGroup.Parent.Name;
+                    } 
+                    catch
+                    {
+
+                    }
+                    formAddChangeGroupProduct.Controls["txtBoxName"].Text = ChangedGroup.Name;
+                    formAddChangeGroupProduct.SelectedGroup = ChangedGroup.Parent;
+                    formAddChangeGroupProduct.ShowDialog();
                     break;
                 case "ucProductsCatalog":
                     MessageBox.Show(panel.Controls[0].Name);
@@ -329,7 +354,24 @@ namespace ShopControlClient
                     MessageBox.Show(panel.Controls[0].Name);
                     break;
                 case "ucProductGroup":
-                    MessageBox.Show(panel.Controls[0].Name);
+
+                        if (id != -1)
+                        {
+                            if (MessageBox.Show("Вы уверены?", "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop) == DialogResult.OK)
+                            {
+                                if (loClient.DeleteGroup(id) == -2)
+                                    {
+                                        MessageBox.Show("Нельзя удалить элемент который имеет дочерние группы, или связан с товарами!","Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                                        break;
+                                    }
+                            ucProductGroup.Instance.LoadTree();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Не выбран елемент!");
+                        }
+
                     break;
                 case "ucProductsCatalog":
                     MessageBox.Show(panel.Controls[0].Name);
@@ -355,11 +397,15 @@ namespace ShopControlClient
             if (!panel.Controls.Contains(ucMenuCashier.Instance))
             {
                 panel.Controls.Add(ucMenuCashier.Instance);
+                ucMenuCashier.Instance.ReloadTree();
                 ucMenuCashier.Instance.Dock = DockStyle.Fill;
                 ucMenuCashier.Instance.BringToFront();
             }
             else
+            {
+                ucMenuCashier.Instance.ReloadTree();
                 ucMenuCashier.Instance.BringToFront();
+            }
         }
 
         private void toolStrBtnProdazhi_Click(object sender, EventArgs e)

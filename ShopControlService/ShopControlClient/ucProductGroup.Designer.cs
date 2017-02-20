@@ -39,6 +39,7 @@
             this.treeViewProductGroup.Name = "treeViewProductGroup";
             this.treeViewProductGroup.Size = new System.Drawing.Size(589, 417);
             this.treeViewProductGroup.TabIndex = 0;
+            this.treeViewProductGroup.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewProductGroup_AfterSelect);
             this.treeViewProductGroup.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeViewProductGroup_MouseClick);
             // 
             // ucProductGroup

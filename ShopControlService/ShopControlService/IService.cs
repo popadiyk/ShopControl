@@ -51,7 +51,9 @@ namespace ShopControlService
         [OperationContract]
         List<ProductGroup> ProductGroupList();
         [OperationContract]
-        void DeleteGroup(int _id);
+        int DeleteGroup(int _id);
+        [OperationContract]
+        void UpdateGroup(int _id, string NameGroup, int idParent);
 
 
         // ----КІНЕЦЬ---------------- ГРУПИ ТОВАРІВ КАТАЛОГ ----------------------- //

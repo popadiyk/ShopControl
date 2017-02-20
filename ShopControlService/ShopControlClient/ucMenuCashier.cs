@@ -28,6 +28,12 @@ namespace ShopControlClient
         public ucMenuCashier()
         {
             InitializeComponent();
+            ReloadTree();
+        }
+
+        public void ReloadTree()
+        {
+            treeView1.Nodes.Clear();
             treeView1.Nodes.AddRange(ucProductGroup.Instance.DrawTree(loClient.ProductGroupList().ToList()));
         }
 

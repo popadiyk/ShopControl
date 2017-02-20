@@ -14,7 +14,6 @@ namespace ShopControlClient
     public partial class ucProductGroup : UserControl, ISelected
     {
         private readonly ServiceClient loClient = new ServiceClient();
-        //public TreeNodeCollection CollectionNode;
         private static ucProductGroup _instance;
         public static ucProductGroup Instance
         {
@@ -78,11 +77,25 @@ namespace ShopControlClient
 
         public int GetSelectedId()
         {
-            return _id;
+            foreach (var i in loClient.ProductGroupList())
+            {
+                if (i.Name == treeViewProductGroup.SelectedNode.Text)
+                {
+                    _id = i.ID;
+                    return _id;
+                }
+            }
+            return -1;
         }
 
         private void treeViewProductGroup_MouseClick(object sender, MouseEventArgs e)
         {
+
+        }
+
+        private void treeViewProductGroup_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            GetSelectedId();
         }
     }
 }

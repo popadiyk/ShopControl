@@ -37,6 +37,7 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.GroupNull = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +79,7 @@
             this.txtBoxParentGroup.Enabled = false;
             this.txtBoxParentGroup.Location = new System.Drawing.Point(138, 96);
             this.txtBoxParentGroup.Name = "txtBoxParentGroup";
-            this.txtBoxParentGroup.Size = new System.Drawing.Size(221, 20);
+            this.txtBoxParentGroup.Size = new System.Drawing.Size(153, 20);
             this.txtBoxParentGroup.TabIndex = 5;
             // 
             // btnApply
@@ -89,6 +90,7 @@
             this.btnApply.TabIndex = 23;
             this.btnApply.Text = "Применить";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // btnOK
             // 
@@ -108,6 +110,7 @@
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Отмена";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // treeView1
             // 
@@ -117,11 +120,22 @@
             this.treeView1.TabIndex = 24;
             this.treeView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.treeView1_MouseDoubleClick);
             // 
+            // GroupNull
+            // 
+            this.GroupNull.Location = new System.Drawing.Point(298, 94);
+            this.GroupNull.Name = "GroupNull";
+            this.GroupNull.Size = new System.Drawing.Size(61, 23);
+            this.GroupNull.TabIndex = 25;
+            this.GroupNull.Text = "Убрать";
+            this.GroupNull.UseVisualStyleBackColor = true;
+            this.GroupNull.Click += new System.EventHandler(this.GroupNull_Click);
+            // 
             // FormAddChangeGroupProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 323);
+            this.Controls.Add(this.GroupNull);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnOK);
@@ -138,6 +152,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление новой группы товаров";
             this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAddChangeGroupProduct_FormClosed);
             this.Load += new System.EventHandler(this.FormAddChangeGroupProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,5 +170,6 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Button GroupNull;
     }
 }

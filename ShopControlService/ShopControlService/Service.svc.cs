@@ -223,12 +223,44 @@ namespace ShopControlService
                 {
                     
                 }
-
-
             }
         }
 
+        void IService.UpdateGroup(int _id, string NameGroup, int idParent)
+        {
+            using (DataContext db = new DataContext())
+            {
+                try
+                {
+                    ProductGroup changedGroup = db.TProductGroup.
+                        Where(x => x.ID == _id)
+                        .FirstOrDefault();
+                    if (idParent == 0)
+                    {
+                        changedGroup.Name = NameGroup;
+                        db.Entry(changedGroup).Reference(x => x.Parent).CurrentValue = null;
+                        //Тадам)))
+                        //changedGroup.Parent = null;
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        ProductGroup ParentChangedGroup = db.TProductGroup.
+                            Where(x => x.ID == idParent)
+                            .FirstOrDefault();
+                        changedGroup.Name = NameGroup;
+                        changedGroup.Parent = ParentChangedGroup;
+                        db.SaveChanges();
+                    }
 
+
+                }
+                catch (Exception ex)
+                {
+                    Console.Write(ex.ToString());
+                }
+            }
+        }
 
         public List<ProductGroup> ProductGroupList()
         {
@@ -238,7 +270,7 @@ namespace ShopControlService
             }
         }
 
-        public void DeleteGroup(int _id)
+        public int DeleteGroup(int _id)
         {
             using (DataContext db = new DataContext())
             {
@@ -249,13 +281,23 @@ namespace ShopControlService
                 }
                 else
                 {
-                    removeGroup = db.TProductGroup.
-                        Where(x => x.ID == _id)
-                        .FirstOrDefault();
+
+                        removeGroup = db.TProductGroup.
+                            Where(x => x.ID == _id)
+                            .FirstOrDefault();
                 }
-                db.TProductGroup.Remove(removeGroup);
-                db.SaveChanges();
+                try
+                {
+                    db.TProductGroup.Remove(removeGroup);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    return -2;
+                }
+
             }
+            return 0;
 
         }
 

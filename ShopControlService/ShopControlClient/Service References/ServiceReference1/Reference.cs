@@ -495,10 +495,16 @@ namespace ShopControlClient.ServiceReference1 {
         System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ProductGroup[]> ProductGroupListAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGroup", ReplyAction="http://tempuri.org/IService/DeleteGroupResponse")]
-        void DeleteGroup(int _id);
+        int DeleteGroup(int _id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGroup", ReplyAction="http://tempuri.org/IService/DeleteGroupResponse")]
-        System.Threading.Tasks.Task DeleteGroupAsync(int _id);
+        System.Threading.Tasks.Task<int> DeleteGroupAsync(int _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGroup", ReplyAction="http://tempuri.org/IService/UpdateGroupResponse")]
+        void UpdateGroup(int _id, string NameGroup, int idParent);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGroup", ReplyAction="http://tempuri.org/IService/UpdateGroupResponse")]
+        System.Threading.Tasks.Task UpdateGroupAsync(int _id, string NameGroup, int idParent);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -624,12 +630,20 @@ namespace ShopControlClient.ServiceReference1 {
             return base.Channel.ProductGroupListAsync();
         }
         
-        public void DeleteGroup(int _id) {
-            base.Channel.DeleteGroup(_id);
+        public int DeleteGroup(int _id) {
+            return base.Channel.DeleteGroup(_id);
         }
         
-        public System.Threading.Tasks.Task DeleteGroupAsync(int _id) {
+        public System.Threading.Tasks.Task<int> DeleteGroupAsync(int _id) {
             return base.Channel.DeleteGroupAsync(_id);
+        }
+        
+        public void UpdateGroup(int _id, string NameGroup, int idParent) {
+            base.Channel.UpdateGroup(_id, NameGroup, idParent);
+        }
+        
+        public System.Threading.Tasks.Task UpdateGroupAsync(int _id, string NameGroup, int idParent) {
+            return base.Channel.UpdateGroupAsync(_id, NameGroup, idParent);
         }
     }
 }

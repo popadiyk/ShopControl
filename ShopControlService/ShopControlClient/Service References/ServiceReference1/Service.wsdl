@@ -85,6 +85,12 @@
   <wsdl:message name="IService_DeleteGroup_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteGroupResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_UpdateGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGroupResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="AddNewClient">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/AddNewClient" message="tns:IService_AddNewClient_InputMessage" />
@@ -137,6 +143,10 @@
     <wsdl:operation name="DeleteGroup">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteGroup" message="tns:IService_DeleteGroup_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteGroupResponse" message="tns:IService_DeleteGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateGroup" message="tns:IService_UpdateGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateGroupResponse" message="tns:IService_UpdateGroup_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -251,6 +261,15 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteGroup">
       <soap:operation soapAction="http://tempuri.org/IService/DeleteGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroup">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateGroup" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

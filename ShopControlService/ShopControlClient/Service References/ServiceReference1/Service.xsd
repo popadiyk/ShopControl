@@ -189,6 +189,22 @@
   </xs:element>
   <xs:element name="DeleteGroupResponse">
     <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteGroupResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" type="xs:int" />
+        <xs:element minOccurs="0" name="NameGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idParent" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGroupResponse">
+    <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
