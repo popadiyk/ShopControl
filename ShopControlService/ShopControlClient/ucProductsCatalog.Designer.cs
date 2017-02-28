@@ -28,32 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.listViewProductsCatalog = new System.Windows.Forms.ListView();
+            this.MarkProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NameProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.QuantProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PriceProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.GroupProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ManufProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // label1
+            // listViewProductsCatalog
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Каталог продуктов";
+            this.listViewProductsCatalog.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.MarkProd,
+            this.NameProd,
+            this.QuantProd,
+            this.PriceProd,
+            this.GroupProd,
+            this.ManufProd});
+            this.listViewProductsCatalog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewProductsCatalog.FullRowSelect = true;
+            this.listViewProductsCatalog.GridLines = true;
+            this.listViewProductsCatalog.Location = new System.Drawing.Point(0, 0);
+            this.listViewProductsCatalog.Name = "listViewProductsCatalog";
+            this.listViewProductsCatalog.Size = new System.Drawing.Size(800, 400);
+            this.listViewProductsCatalog.TabIndex = 0;
+            this.listViewProductsCatalog.UseCompatibleStateImageBehavior = false;
+            this.listViewProductsCatalog.View = System.Windows.Forms.View.Details;
+            this.listViewProductsCatalog.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewProductsCatalog_ItemSelectionChanged);
+            this.listViewProductsCatalog.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listViewProductsCatalog_MouseClick);
+            // 
+            // MarkProd
+            // 
+            this.MarkProd.Text = "Артикул";
+            // 
+            // NameProd
+            // 
+            this.NameProd.Text = "Наименование";
+            this.NameProd.Width = 360;
+            // 
+            // QuantProd
+            // 
+            this.QuantProd.Text = "Остаток";
+            // 
+            // PriceProd
+            // 
+            this.PriceProd.Text = "Цена розн.";
+            this.PriceProd.Width = 77;
+            // 
+            // GroupProd
+            // 
+            this.GroupProd.Text = "Группа товара";
+            this.GroupProd.Width = 150;
+            // 
+            // ManufProd
+            // 
+            this.ManufProd.Text = "Производитель";
+            this.ManufProd.Width = 150;
             // 
             // ucProductsCatalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listViewProductsCatalog);
             this.Name = "ucProductsCatalog";
-            this.Size = new System.Drawing.Size(583, 404);
+            this.Size = new System.Drawing.Size(800, 400);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView listViewProductsCatalog;
+        private System.Windows.Forms.ColumnHeader MarkProd;
+        private System.Windows.Forms.ColumnHeader NameProd;
+        private System.Windows.Forms.ColumnHeader PriceProd;
+        private System.Windows.Forms.ColumnHeader QuantProd;
+        private System.Windows.Forms.ColumnHeader GroupProd;
+        private System.Windows.Forms.ColumnHeader ManufProd;
     }
 }

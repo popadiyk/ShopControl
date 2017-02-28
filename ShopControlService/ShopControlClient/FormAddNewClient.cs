@@ -42,7 +42,7 @@ namespace ShopControlClient
                 dateTimePickerAddClient.Value = DateTime.Now;
 
                 ucClientCatalog.Instance.ReloadList();
-
+                
                 Close();
             }
             catch (Exception ex)

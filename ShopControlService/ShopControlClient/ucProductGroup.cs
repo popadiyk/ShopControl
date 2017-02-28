@@ -30,6 +30,7 @@ namespace ShopControlClient
             InitializeComponent();
             LoadTree();
         }
+    
 
 
         public void LoadTree()

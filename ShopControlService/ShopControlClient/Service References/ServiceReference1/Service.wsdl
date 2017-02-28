@@ -91,6 +91,24 @@
   <wsdl:message name="IService_UpdateGroup_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateGroupResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_ProductCatalogList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductCatalogList" />
+  </wsdl:message>
+  <wsdl:message name="IService_ProductCatalogList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductCatalogListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddNewProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewProduct" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddNewProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SearchByGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService_SearchByGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchByGroupResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="AddNewClient">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/AddNewClient" message="tns:IService_AddNewClient_InputMessage" />
@@ -147,6 +165,18 @@
     <wsdl:operation name="UpdateGroup">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateGroup" message="tns:IService_UpdateGroup_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateGroupResponse" message="tns:IService_UpdateGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductCatalogList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ProductCatalogList" message="tns:IService_ProductCatalogList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ProductCatalogListResponse" message="tns:IService_ProductCatalogList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddNewProduct" message="tns:IService_AddNewProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddNewProductResponse" message="tns:IService_AddNewProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchByGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SearchByGroup" message="tns:IService_SearchByGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SearchByGroupResponse" message="tns:IService_SearchByGroup_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -270,6 +300,33 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateGroup">
       <soap:operation soapAction="http://tempuri.org/IService/UpdateGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductCatalogList">
+      <soap:operation soapAction="http://tempuri.org/IService/ProductCatalogList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewProduct">
+      <soap:operation soapAction="http://tempuri.org/IService/AddNewProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByGroup">
+      <soap:operation soapAction="http://tempuri.org/IService/SearchByGroup" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

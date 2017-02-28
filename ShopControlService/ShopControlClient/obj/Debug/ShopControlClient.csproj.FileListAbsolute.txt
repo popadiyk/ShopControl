@@ -17,4 +17,8 @@ C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlS
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.csproj.GenerateResource.Cache
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.exe
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.pdb
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.FormAddChangeProducts.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.FormListManufacturer.resources
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.FormTreeGroup.resources
 C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.csprojResolveAssemblyReference.cache
+C:\Users\ПК\Documents\Visual Studio 2015\Projects\WCF\ShopControl\ShopControlService\ShopControlClient\obj\Debug\ShopControlClient.FormListClient.resources

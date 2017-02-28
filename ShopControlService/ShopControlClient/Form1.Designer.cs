@@ -58,15 +58,14 @@
             this.OtchetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelForPhoto = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelForInfo = new System.Windows.Forms.Panel();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabCashNal = new System.Windows.Forms.TabPage();
             this.tabCashBeznal = new System.Windows.Forms.TabPage();
             this.tabCashTotal = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStripMainMenu = new System.Windows.Forms.ToolStrip();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel = new System.Windows.Forms.Panel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrBtnMenuCashier = new System.Windows.Forms.ToolStripButton();
             this.toolStrBtnProdazhi = new System.Windows.Forms.ToolStripButton();
@@ -81,18 +80,20 @@
             this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel = new System.Windows.Forms.Panel();
+            this.toolStripMainMenu = new System.Windows.Forms.ToolStrip();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panelForPhoto.SuspendLayout();
             this.panelForInfo.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.toolStripMainMenu.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.toolStripMainMenu.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -209,28 +210,28 @@
             // MenuCasiraToolStripMenuItem
             // 
             this.MenuCasiraToolStripMenuItem.Name = "MenuCasiraToolStripMenuItem";
-            this.MenuCasiraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.MenuCasiraToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.MenuCasiraToolStripMenuItem.Text = "Меню касира";
             this.MenuCasiraToolStripMenuItem.Click += new System.EventHandler(this.MenuCasiraToolStripMenuItem_Click);
             // 
             // prodazhiToolStripMenuItem
             // 
             this.prodazhiToolStripMenuItem.Name = "prodazhiToolStripMenuItem";
-            this.prodazhiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.prodazhiToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.prodazhiToolStripMenuItem.Text = "Продажи";
             this.prodazhiToolStripMenuItem.Click += new System.EventHandler(this.prodazhiToolStripMenuItem_Click);
             // 
             // zakupkiToolStripMenuItem
             // 
             this.zakupkiToolStripMenuItem.Name = "zakupkiToolStripMenuItem";
-            this.zakupkiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zakupkiToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.zakupkiToolStripMenuItem.Text = "Закупки";
             this.zakupkiToolStripMenuItem.Click += new System.EventHandler(this.zakupkiToolStripMenuItem_Click);
             // 
             // spisanieToolStripMenuItem
             // 
             this.spisanieToolStripMenuItem.Name = "spisanieToolStripMenuItem";
-            this.spisanieToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.spisanieToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.spisanieToolStripMenuItem.Text = "Списания";
             this.spisanieToolStripMenuItem.Click += new System.EventHandler(this.spisanieToolStripMenuItem_Click);
             // 
@@ -332,9 +333,9 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.panelForPhoto, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.panelForInfo, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -344,26 +345,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 242F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(251, 667);
             this.tableLayoutPanel2.TabIndex = 8;
-            // 
-            // panelForPhoto
-            // 
-            this.panelForPhoto.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panelForPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelForPhoto.Controls.Add(this.label2);
-            this.panelForPhoto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForPhoto.Location = new System.Drawing.Point(3, 427);
-            this.panelForPhoto.Name = "panelForPhoto";
-            this.panelForPhoto.Size = new System.Drawing.Size(245, 237);
-            this.panelForPhoto.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ФОТО";
             // 
             // panelForInfo
             // 
@@ -403,7 +384,7 @@
             this.tabCashBeznal.Location = new System.Drawing.Point(4, 22);
             this.tabCashBeznal.Name = "tabCashBeznal";
             this.tabCashBeznal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCashBeznal.Size = new System.Drawing.Size(237, 53);
+            this.tabCashBeznal.Size = new System.Drawing.Size(238, 53);
             this.tabCashBeznal.TabIndex = 1;
             this.tabCashBeznal.Text = "Безналичный";
             this.tabCashBeznal.UseVisualStyleBackColor = true;
@@ -413,7 +394,7 @@
             this.tabCashTotal.Location = new System.Drawing.Point(4, 22);
             this.tabCashTotal.Name = "tabCashTotal";
             this.tabCashTotal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCashTotal.Size = new System.Drawing.Size(237, 53);
+            this.tabCashTotal.Size = new System.Drawing.Size(238, 53);
             this.tabCashTotal.TabIndex = 2;
             this.tabCashTotal.Text = "Всего";
             this.tabCashTotal.UseVisualStyleBackColor = true;
@@ -429,31 +410,26 @@
             this.panel1.Size = new System.Drawing.Size(245, 333);
             this.panel1.TabIndex = 2;
             // 
-            // toolStripMainMenu
+            // tableLayoutPanel3
             // 
-            this.toolStripMainMenu.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toolStripMainMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStrBtnMenuCashier,
-            this.toolStrBtnProdazhi,
-            this.toolStrBtnZakupki,
-            this.toolStrBtnSpisanie,
-            this.toolStripLabel2,
-            this.toolStrBtnGroupProducts,
-            this.toolStrBtnProductsCatalog,
-            this.toolStrBtnManufacturer,
-            this.toolStrBtnClient,
-            this.toolStripLabel3,
-            this.toolStripButton12,
-            this.toolStripButton13,
-            this.toolStripButton14});
-            this.toolStripMainMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.toolStripMainMenu.Location = new System.Drawing.Point(0, 0);
-            this.toolStripMainMenu.Name = "toolStripMainMenu";
-            this.toolStripMainMenu.Size = new System.Drawing.Size(243, 316);
-            this.toolStripMainMenu.TabIndex = 3;
-            this.toolStripMainMenu.Text = "toolStrip2";
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.panel, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(260, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1087, 667);
+            this.tableLayoutPanel3.TabIndex = 9;
+            // 
+            // panel
+            // 
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Location = new System.Drawing.Point(3, 3);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1081, 661);
+            this.panel.TabIndex = 8;
             // 
             // toolStripLabel1
             // 
@@ -590,26 +566,52 @@
             this.toolStripButton14.Size = new System.Drawing.Size(241, 19);
             this.toolStripButton14.Text = "Баланс кас";
             // 
-            // tableLayoutPanel3
+            // toolStripMainMenu
             // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.panel, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(260, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1087, 667);
-            this.tableLayoutPanel3.TabIndex = 9;
+            this.toolStripMainMenu.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMainMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStrBtnMenuCashier,
+            this.toolStrBtnProdazhi,
+            this.toolStrBtnZakupki,
+            this.toolStrBtnSpisanie,
+            this.toolStripLabel2,
+            this.toolStrBtnGroupProducts,
+            this.toolStrBtnProductsCatalog,
+            this.toolStrBtnManufacturer,
+            this.toolStrBtnClient,
+            this.toolStripLabel3,
+            this.toolStripButton12,
+            this.toolStripButton13,
+            this.toolStripButton14});
+            this.toolStripMainMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.toolStripMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.toolStripMainMenu.Name = "toolStripMainMenu";
+            this.toolStripMainMenu.Size = new System.Drawing.Size(243, 316);
+            this.toolStripMainMenu.TabIndex = 3;
+            this.toolStripMainMenu.Text = "toolStrip2";
             // 
-            // panel
+            // panel2
             // 
-            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.Location = new System.Drawing.Point(3, 3);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1081, 661);
-            this.panel.TabIndex = 8;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 427);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(245, 237);
+            this.panel2.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 235);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -631,15 +633,15 @@
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panelForPhoto.ResumeLayout(false);
-            this.panelForPhoto.PerformLayout();
             this.panelForInfo.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.toolStripMainMenu.ResumeLayout(false);
             this.toolStripMainMenu.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,7 +678,6 @@
         private System.Windows.Forms.ToolStripMenuItem OtchetToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel panelForPhoto;
         private System.Windows.Forms.Panel panelForInfo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel;
@@ -684,14 +685,13 @@
         private System.Windows.Forms.TabPage tabCashNal;
         private System.Windows.Forms.TabPage tabCashBeznal;
         private System.Windows.Forms.TabPage tabCashTotal;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStrip toolStripMainMenu;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton toolStrBtnMenuCashier;
         private System.Windows.Forms.ToolStripButton toolStrBtnProdazhi;
         private System.Windows.Forms.ToolStripButton toolStrBtnZakupki;
         private System.Windows.Forms.ToolStripButton toolStrBtnSpisanie;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripButton toolStrBtnGroupProducts;
         private System.Windows.Forms.ToolStripButton toolStrBtnProductsCatalog;
@@ -701,6 +701,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton12;
         private System.Windows.Forms.ToolStripButton toolStripButton13;
         private System.Windows.Forms.ToolStripButton toolStripButton14;
+        private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

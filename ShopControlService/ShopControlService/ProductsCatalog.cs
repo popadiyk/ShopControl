@@ -9,7 +9,9 @@ namespace ShopControlService
 {
     public class ProductsCatalog : EntityId
     {
+        [Required]
         public virtual ProductGroup Group { get; set; }
+        [Required]
         public virtual ManufacturerCatalog Manufacturer { get; set; }
         [Required]
         [MaxLength(250)]

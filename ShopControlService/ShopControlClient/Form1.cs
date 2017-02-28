@@ -13,20 +13,32 @@ namespace ShopControlClient
 {
     public partial class MainForm : Form
     {
+        public static MainForm Instance;
         public MainForm()
         {
             InitializeComponent();
+            Instance = this;
             formAddNewClient = new FormAddNewClient();
             formAddChangeManufacturer = new FormAddChangeManufacturer();
             formAddChangeGroupProduct = new FormAddChangeGroupProduct();
+            formAddChangeProducts = new FormAddChangeProducts();
             panel.Controls.Add(ucMenuCashier.Instance);
             ucMenuCashier.Instance.Dock = DockStyle.Fill;
             ucMenuCashier.Instance.BringToFront();
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            PutImage("2");
         }
+
+        public void PutImage(string myImg)
+        {
+            pictureBox1.ImageLocation = "c:/" + myImg + ".jpg";
+        }
+
         private ServiceClient loClient = new ServiceClient();
         FormAddNewClient formAddNewClient;
         FormAddChangeManufacturer formAddChangeManufacturer;
         FormAddChangeGroupProduct formAddChangeGroupProduct;
+        FormAddChangeProducts formAddChangeProducts;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -68,7 +80,10 @@ namespace ShopControlClient
                     formAddChangeGroupProduct.ShowDialog();
                     break;
                 case "ucProductsCatalog":
-                    MessageBox.Show(myControl);
+                    formAddChangeProducts.Text = "Добавление товара";
+                    formAddChangeProducts.Controls["btnApply"].Enabled = false;
+                    formAddChangeProducts.Controls["btnOK"].Enabled = true;
+                    formAddChangeProducts.ShowDialog();
                     break;
                 case "ucPurchaseCatalog":
                     MessageBox.Show(myControl);
@@ -400,6 +415,7 @@ namespace ShopControlClient
                 ucMenuCashier.Instance.ReloadTree();
                 ucMenuCashier.Instance.Dock = DockStyle.Fill;
                 ucMenuCashier.Instance.BringToFront();
+
             }
             else
             {

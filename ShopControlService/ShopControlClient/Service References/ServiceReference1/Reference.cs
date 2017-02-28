@@ -154,6 +154,7 @@ namespace ShopControlClient.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ShopControlClient.ServiceReference1.ManufacturerCatalog))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ShopControlClient.ServiceReference1.ProductGroup))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(ShopControlClient.ServiceReference1.ProductsCatalog))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(ShopControlClient.ServiceReference1.ClientCatalog))]
     public partial class EntityId : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -418,6 +419,173 @@ namespace ShopControlClient.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProductsCatalog", Namespace="http://schemas.datacontract.org/2004/07/ShopControlService")]
+    [System.SerializableAttribute()]
+    public partial class ProductsCatalog : ShopControlClient.ServiceReference1.EntityId {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AdressPhotoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ShopControlClient.ServiceReference1.ProductGroup GroupField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsRealizationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ShopControlClient.ServiceReference1.ManufacturerCatalog ManufacturerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MarkingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float PurchasePriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuantityField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AdressPhoto {
+            get {
+                return this.AdressPhotoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AdressPhotoField, value) != true)) {
+                    this.AdressPhotoField = value;
+                    this.RaisePropertyChanged("AdressPhoto");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ShopControlClient.ServiceReference1.ProductGroup Group {
+            get {
+                return this.GroupField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GroupField, value) != true)) {
+                    this.GroupField = value;
+                    this.RaisePropertyChanged("Group");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsRealization {
+            get {
+                return this.IsRealizationField;
+            }
+            set {
+                if ((this.IsRealizationField.Equals(value) != true)) {
+                    this.IsRealizationField = value;
+                    this.RaisePropertyChanged("IsRealization");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ShopControlClient.ServiceReference1.ManufacturerCatalog Manufacturer {
+            get {
+                return this.ManufacturerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ManufacturerField, value) != true)) {
+                    this.ManufacturerField = value;
+                    this.RaisePropertyChanged("Manufacturer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Marking {
+            get {
+                return this.MarkingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MarkingField, value) != true)) {
+                    this.MarkingField = value;
+                    this.RaisePropertyChanged("Marking");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float PurchasePrice {
+            get {
+                return this.PurchasePriceField;
+            }
+            set {
+                if ((this.PurchasePriceField.Equals(value) != true)) {
+                    this.PurchasePriceField = value;
+                    this.RaisePropertyChanged("PurchasePrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((this.QuantityField.Equals(value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService")]
     public interface IService {
@@ -505,6 +673,24 @@ namespace ShopControlClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGroup", ReplyAction="http://tempuri.org/IService/UpdateGroupResponse")]
         System.Threading.Tasks.Task UpdateGroupAsync(int _id, string NameGroup, int idParent);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ProductCatalogList", ReplyAction="http://tempuri.org/IService/ProductCatalogListResponse")]
+        ShopControlClient.ServiceReference1.ProductsCatalog[] ProductCatalogList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ProductCatalogList", ReplyAction="http://tempuri.org/IService/ProductCatalogListResponse")]
+        System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ProductsCatalog[]> ProductCatalogListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddNewProduct", ReplyAction="http://tempuri.org/IService/AddNewProductResponse")]
+        void AddNewProduct(string NameProduct, int idGroup, int idManufacturer, string MarkingProduct, float PurchPriceProduct, float PriceProduct, string DescriptionProduct);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddNewProduct", ReplyAction="http://tempuri.org/IService/AddNewProductResponse")]
+        System.Threading.Tasks.Task AddNewProductAsync(string NameProduct, int idGroup, int idManufacturer, string MarkingProduct, float PurchPriceProduct, float PriceProduct, string DescriptionProduct);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SearchByGroup", ReplyAction="http://tempuri.org/IService/SearchByGroupResponse")]
+        ShopControlClient.ServiceReference1.ProductsCatalog[] SearchByGroup(string Group);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SearchByGroup", ReplyAction="http://tempuri.org/IService/SearchByGroupResponse")]
+        System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ProductsCatalog[]> SearchByGroupAsync(string Group);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -644,6 +830,30 @@ namespace ShopControlClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task UpdateGroupAsync(int _id, string NameGroup, int idParent) {
             return base.Channel.UpdateGroupAsync(_id, NameGroup, idParent);
+        }
+        
+        public ShopControlClient.ServiceReference1.ProductsCatalog[] ProductCatalogList() {
+            return base.Channel.ProductCatalogList();
+        }
+        
+        public System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ProductsCatalog[]> ProductCatalogListAsync() {
+            return base.Channel.ProductCatalogListAsync();
+        }
+        
+        public void AddNewProduct(string NameProduct, int idGroup, int idManufacturer, string MarkingProduct, float PurchPriceProduct, float PriceProduct, string DescriptionProduct) {
+            base.Channel.AddNewProduct(NameProduct, idGroup, idManufacturer, MarkingProduct, PurchPriceProduct, PriceProduct, DescriptionProduct);
+        }
+        
+        public System.Threading.Tasks.Task AddNewProductAsync(string NameProduct, int idGroup, int idManufacturer, string MarkingProduct, float PurchPriceProduct, float PriceProduct, string DescriptionProduct) {
+            return base.Channel.AddNewProductAsync(NameProduct, idGroup, idManufacturer, MarkingProduct, PurchPriceProduct, PriceProduct, DescriptionProduct);
+        }
+        
+        public ShopControlClient.ServiceReference1.ProductsCatalog[] SearchByGroup(string Group) {
+            return base.Channel.SearchByGroup(Group);
+        }
+        
+        public System.Threading.Tasks.Task<ShopControlClient.ServiceReference1.ProductsCatalog[]> SearchByGroupAsync(string Group) {
+            return base.Channel.SearchByGroupAsync(Group);
         }
     }
 }

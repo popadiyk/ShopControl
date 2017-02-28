@@ -240,7 +240,6 @@ namespace ShopControlService
                         changedGroup.Name = NameGroup;
                         db.Entry(changedGroup).Reference(x => x.Parent).CurrentValue = null;
                         //Тадам)))
-                        //changedGroup.Parent = null;
                         db.SaveChanges();
                     }
                     else
@@ -281,7 +280,6 @@ namespace ShopControlService
                 }
                 else
                 {
-
                         removeGroup = db.TProductGroup.
                             Where(x => x.ID == _id)
                             .FirstOrDefault();
@@ -302,6 +300,66 @@ namespace ShopControlService
         }
 
         // ------КІНЕЦЬ-------------- ГРУПИ ТОВАРІВ КАТАЛОГ ----------------------- //
+
+        // -------------------------- КАТАЛОГ ТОВАРІВ ----------------------------- //
+
+        public List<ProductsCatalog> ProductCatalogList()
+        {
+            using (DataContext db = new DataContext())
+            {
+                return db.TProductsCatalog
+                    .Include("Group")
+                    .Include("Manufacturer")
+                    .ToList();
+            }
+        }
+
+        public void AddNewProduct(string NameProduct, int idGroup, int idManufacturer,
+            string MarkingProduct, float PurchPriceProduct, float PriceProduct, string DescriptionProduct)
+        {
+            using (DataContext db = new DataContext())
+            {
+                try
+                {
+                    ProductsCatalog newProduct = new ProductsCatalog();
+                    newProduct.Name = NameProduct;
+                    newProduct.Group = db.TProductGroup
+                        .Where(x => x.ID == idGroup)
+                        .FirstOrDefault();
+                    newProduct.Manufacturer = db.TManufacturerCatalog
+                        .Where(x => x.ID == idManufacturer)
+                        .FirstOrDefault();
+                    newProduct.Marking = MarkingProduct;
+                    newProduct.PurchasePrice = PurchPriceProduct;
+                    newProduct.Price = PriceProduct;
+                    newProduct.Description = DescriptionProduct;
+
+                    db.TProductsCatalog.Add(newProduct);
+                    db.SaveChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        // ------КІНЕЦЬ-------------- КАТАЛОГ ТОВАРІВ ----------------------------- //
+
+        // ---------------------------- ПОШУК ТОВАРІВ ----------------------------- //
+        public List<ProductsCatalog> SearchByGroup(string Group)
+        {
+            using (DataContext db = new DataContext())
+            {
+                return db.TProductsCatalog
+                    .Include("Group")
+                    .Include("Manufacturer")
+                    .Where(x => x.Group.Name == Group)
+                    .ToList();
+            }
+        }
+        // ------КІНЕЦЬ---------------- ПОШУК ТОВАРІВ ----------------------------- //
+
 
     }
 }

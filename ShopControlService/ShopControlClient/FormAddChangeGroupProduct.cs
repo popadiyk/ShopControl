@@ -23,15 +23,15 @@ namespace ShopControlClient
         { 
                 foreach (var i in loClient.ProductGroupList())
                 {
-                    if (i.Name == treeView1.SelectedNode.Text)
+                    if (i.Name == treeView1.SelectedNode?.Text)
                     {                
                         SelectedGroup = i;
                         txtBoxParentGroup.Text = SelectedGroup.Name;
                         return SelectedGroup.ID;
                     }
                 }
-            SelectedGroup.ID = 0;
-            return SelectedGroup.ID;         
+
+            return 0;         
         }
 
         private void ClearForm()
@@ -48,7 +48,7 @@ namespace ShopControlClient
                     txtBoxName.Text,
                     SelectedGroup.ID
                 );
-                SelectedGroup = new ProductGroup();
+                SelectedGroup = null;
                 ClearForm();
                 this.Close();
                 ucProductGroup.Instance.LoadTree();
@@ -64,6 +64,17 @@ namespace ShopControlClient
         {
             treeView1.Nodes.Clear();
             treeView1.Nodes.AddRange(ucProductGroup.Instance.DrawTree(loClient.ProductGroupList().ToList()));
+            if (GetGroup() == 0)
+            {
+                try
+                {
+                    SelectedGroup.ID = 0;
+                }
+                catch
+                {
+                    SelectedGroup = null;
+                }
+            }
         }
 
         private void treeView1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -75,6 +86,7 @@ namespace ShopControlClient
         {
         try
             {
+                GetGroup();
                 loClient.UpdateGroup(
                     Convert.ToInt32(Tag.ToString()),
                     txtBoxName.Text,
@@ -82,7 +94,7 @@ namespace ShopControlClient
                 );
                 SelectedGroup = null;
                 ClearForm();
-                this.Close();
+                Close();
                 ucProductGroup.Instance.LoadTree();
             }
             catch (Exception ex)
@@ -95,19 +107,26 @@ namespace ShopControlClient
         {
             SelectedGroup = null;
             ClearForm();
-            this.Close();
+            Close();
         }
 
         private void FormAddChangeGroupProduct_FormClosed(object sender, FormClosedEventArgs e)
         {
             SelectedGroup = null;
             ClearForm();
-            this.Close();
+            Close();
         }
 
         private void GroupNull_Click(object sender, EventArgs e)
         {
-            SelectedGroup.ID = 0;
+            try
+            {
+                SelectedGroup.ID = 0;
+            }
+            catch
+            {
+                SelectedGroup = null;
+            }
             txtBoxParentGroup.Text = "";
         }
     }

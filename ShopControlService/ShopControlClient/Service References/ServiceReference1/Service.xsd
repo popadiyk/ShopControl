@@ -208,4 +208,48 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="ProductCatalogList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductCatalogListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ShopControlService" minOccurs="0" name="ProductCatalogListResult" nillable="true" type="q6:ArrayOfProductsCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NameProduct" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idGroup" type="xs:int" />
+        <xs:element minOccurs="0" name="idManufacturer" type="xs:int" />
+        <xs:element minOccurs="0" name="MarkingProduct" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PurchPriceProduct" type="xs:float" />
+        <xs:element minOccurs="0" name="PriceProduct" type="xs:float" />
+        <xs:element minOccurs="0" name="DescriptionProduct" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewProductResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchByGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Group" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchByGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ShopControlService" minOccurs="0" name="SearchByGroupResult" nillable="true" type="q7:ArrayOfProductsCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

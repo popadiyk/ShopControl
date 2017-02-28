@@ -135,6 +135,10 @@
     <Compile Include="Migrations\201702151016531_ChangedProductGroup2.Designer.cs">
       <DependentUpon>201702151016531_ChangedProductGroup2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702220952323_ChangedProductsCatalog.cs" />
+    <Compile Include="Migrations\201702220952323_ChangedProductsCatalog.Designer.cs">
+      <DependentUpon>201702220952323_ChangedProductsCatalog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductGroup.cs" />
     <Compile Include="ProductsCatalog.cs" />
@@ -182,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702151016531_ChangedProductGroup2.resx">
       <DependentUpon>201702151016531_ChangedProductGroup2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702220952323_ChangedProductsCatalog.resx">
+      <DependentUpon>201702220952323_ChangedProductsCatalog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

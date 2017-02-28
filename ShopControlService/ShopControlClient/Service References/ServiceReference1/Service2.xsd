@@ -72,4 +72,29 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="ProductGroup" nillable="true" type="tns:ProductGroup" />
+  <xs:complexType name="ArrayOfProductsCatalog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductsCatalog" nillable="true" type="tns:ProductsCatalog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductsCatalog" nillable="true" type="tns:ArrayOfProductsCatalog" />
+  <xs:complexType name="ProductsCatalog">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdressPhoto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Group" nillable="true" type="tns:ProductGroup" />
+          <xs:element minOccurs="0" name="IsRealization" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="tns:ManufacturerCatalog" />
+          <xs:element minOccurs="0" name="Marking" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Price" type="xs:float" />
+          <xs:element minOccurs="0" name="PurchasePrice" type="xs:float" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductsCatalog" nillable="true" type="tns:ProductsCatalog" />
 </xs:schema>

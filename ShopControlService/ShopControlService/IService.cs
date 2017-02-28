@@ -55,8 +55,21 @@ namespace ShopControlService
         [OperationContract]
         void UpdateGroup(int _id, string NameGroup, int idParent);
 
-
         // ----КІНЕЦЬ---------------- ГРУПИ ТОВАРІВ КАТАЛОГ ----------------------- //
+
+        // -------------------------- КАТАЛОГ ТОВАРІВ ----------------------------- //
+        [OperationContract]
+        List<ProductsCatalog> ProductCatalogList();
+        [OperationContract]
+        void AddNewProduct(string NameProduct, int idGroup, int idManufacturer,
+            string MarkingProduct, float PurchPriceProduct, float PriceProduct, string DescriptionProduct);
+        // ----КІНЕЦЬ---------------- КАТАЛОГ ТОВАРІВ ----------------------------- //
+
+        // ---------------------------- ПОШУК ТОВАРІВ ----------------------------- //
+        [OperationContract]
+        List<ProductsCatalog> SearchByGroup(string Group);
+        // ------КІНЕЦЬ---------------- ПОШУК ТОВАРІВ ----------------------------- //
+
 
 
     }

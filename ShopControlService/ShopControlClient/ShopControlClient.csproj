@@ -66,11 +66,35 @@
     <Compile Include="FormAddChangeManufacturer.Designer.cs">
       <DependentUpon>FormAddChangeManufacturer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddChangeProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddChangeProducts.Designer.cs">
+      <DependentUpon>FormAddChangeProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddNewClient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAddNewClient.Designer.cs">
       <DependentUpon>FormAddNewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListClient.Designer.cs">
+      <DependentUpon>FormListClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListManufacturer.Designer.cs">
+      <DependentUpon>FormListManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTreeGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTreeGroup.Designer.cs">
+      <DependentUpon>FormTreeGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="ISelected.cs" />
@@ -138,8 +162,20 @@
     <EmbeddedResource Include="FormAddChangeManufacturer.resx">
       <DependentUpon>FormAddChangeManufacturer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddChangeProducts.resx">
+      <DependentUpon>FormAddChangeProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddNewClient.resx">
       <DependentUpon>FormAddNewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListClient.resx">
+      <DependentUpon>FormListClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListManufacturer.resx">
+      <DependentUpon>FormListManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTreeGroup.resx">
+      <DependentUpon>FormTreeGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -201,6 +237,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\ShopControlClient.ServiceReference1.ProductGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\ShopControlClient.ServiceReference1.ProductsCatalog.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
